@@ -14,8 +14,7 @@ namespace Учет_СИЗ
         private string Personnel_Number;//Табельный номер
         private string First_Name;      //Имя
         private string Last_Name;       //Фамилия
-        private string Middle_name;     //Отчество эта фтгня достала
-        private string ppz;
+        private string Middle_name;     //Отчество 
         private string Age;                //Возраст
         private string Gender;          //Пол
         private string Height;             //Рост
