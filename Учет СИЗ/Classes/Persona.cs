@@ -23,7 +23,6 @@ namespace Учет_СИЗ
         private string FIO_Chief;       //Руководитель
         private string Facility;        //Объект
         private string Facility_Address;//Адресс объекта
-        private string test;
 
 
 
