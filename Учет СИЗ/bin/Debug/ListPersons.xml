@@ -1,1 +1,17 @@
-﻿
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Change_Personnel_Number>123</Change_Personnel_Number>
+    <Change_First_Name>Илья</Change_First_Name>
+    <Change_Last_Name>Сахаров</Change_Last_Name>
+    <Change_Middle_name>Дмитриевич</Change_Middle_name>
+    <Change_Age>20</Change_Age>
+    <Change_Gender>М</Change_Gender>
+    <Change_Height>167</Change_Height>
+    <Change_Clothing_size>42</Change_Clothing_size>
+    <Change_Position>студент</Change_Position>
+    <Change_FIO_Chief>Якимова</Change_FIO_Chief>
+    <Change_Facility>Яргу</Change_Facility>
+    <Change_Facility_Address>Союзная</Change_Facility_Address>
+  </Person>
+</ArrayOfPerson>

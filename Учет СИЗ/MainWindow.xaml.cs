@@ -32,17 +32,27 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 
-                StackPanel_Persona.Children.Add(new MyButton(per));
+                StackPanel_Persona.Children.Add(new MyButton(ref list_of_persons, per));
             }
 
         }
 
         private void BtnAddPerson_Click(object sender, RoutedEventArgs e)
         {
-            PersonalCard AddWindow = new PersonalCard(list_of_persons);
+            PersonalCard AddWindow = new PersonalCard(list_of_persons, "Add");
             AddWindow.Show();
         }
 
+        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            StackPanel_Persona.Children.Clear();
+            DeserializingPersons();
+            foreach (Person per in list_of_persons)
+            {
+
+                StackPanel_Persona.Children.Add(new MyButton(ref list_of_persons, per));
+            }
+        }
 
         public void DeserializingPersons()
         {            
@@ -72,5 +82,7 @@ namespace Учет_СИЗ
                 xmlFormat.Serialize(fStream, List);
             }
         }
+
+       
     }
 }

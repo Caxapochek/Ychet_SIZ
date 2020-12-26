@@ -10,17 +10,19 @@ namespace Учет_СИЗ.Classes
 {
     class MyButton : Button
     {
+        public List<Person> List;
         public Person PersonBtn;
-        public MyButton(Person Person1)
+        public MyButton(ref List<Person> List, Person Person1)
         {
             PersonBtn = Person1;
             Content = Person1.Change_Last_Name + " " + Person1.Change_First_Name + " " + Person1.Change_Middle_name;
             Click += MyButton_Click;
+            this.List = List;
         }
 
         void MyButton_Click(object sender, EventArgs e)
         {
-            PersonalCard AddWindow = new PersonalCard(PersonBtn);
+            PersonalCard AddWindow = new PersonalCard(List,PersonBtn,"Show");
             AddWindow.Show();
 
         }        

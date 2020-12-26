@@ -18,7 +18,7 @@
 
             </Button>
 
-            <Button Content="dfgdgfa" Margin="5" MaxHeight="30" MinHeight="30" Height="30">
+            <Button x:Name="BtnUpdate" Content="Обновить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnUpdate_Click">
 
             </Button>
         </StackPanel>

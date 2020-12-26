@@ -23,31 +23,52 @@ namespace Учет_СИЗ
     public partial class PersonalCard : Window
     {
         List<Person> List_of_persons = new List<Person>();
+        Person Person1;
         string Mode;                                                    //При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
+        public PersonalCard(List<Person> list_of_persons, Person person, string mode)
+        {
+            InitializeComponent();
+            List_of_persons = list_of_persons;
+            Person1 = person;
+            Mode = mode;
+            List_of_persons.Remove(Person1);
+
+            BtnSavePerson.IsEnabled = true;
+            BtnDeletePerson.IsEnabled = true;
+            BtnSavePerson.Content = "Сохранить";
+        }
         public PersonalCard(List<Person> list_of_persons, string mode)
         {
             InitializeComponent();
-            DeserializingPersons();
             List_of_persons = list_of_persons;
+            Mode = mode;
+
+            BtnDeletePerson.IsEnabled = false;
+            BtnSavePerson.IsEnabled = true;
+            BtnSavePerson.Content = "Добавить";
+
         }
         
 
 
-
         private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
-            Person person = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
+            Person1 = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
                 MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
                 ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
                 FacilityAdress.Text.ToString());
-            List_of_persons.Add(person);
+            List_of_persons.Add(Person1);
             SerializingPersons(List_of_persons);
+
+            this.Close();
         }
 
 
         private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
         {
-
+            List_of_persons.Remove(Person1);
+            SerializingPersons(List_of_persons);
+            this.Close();
         }
         public void DeserializingPersons()
         {
