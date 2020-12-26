@@ -22,14 +22,13 @@ namespace Учет_СИЗ
     /// </summary>
     public partial class PersonalCard : Window
     {
-        List_Persons<Person> List_of_persons = new List_Persons<Person>();
-        string Mode;
-        public PersonalCard(List_Persons<Person> list_of_persons, string mode)
+        List<Person> List_of_persons = new List<Person>();
+        string Mode;                                                    //При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
+        public PersonalCard(List<Person> list_of_persons, string mode)
         {
             InitializeComponent();
             DeserializingPersons();
             List_of_persons = list_of_persons;
-            list_of_persons
         }
         
 
@@ -41,7 +40,7 @@ namespace Учет_СИЗ
                 MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
                 ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
                 FacilityAdress.Text.ToString());
-            List_of_persons.AddAfter(person);
+            List_of_persons.Add(person);
             SerializingPersons(List_of_persons);
         }
 
@@ -52,12 +51,12 @@ namespace Учет_СИЗ
         }
         public void DeserializingPersons()
         {
-            XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
             using (Stream fStream = File.OpenRead(@"ListPersons.xml"))
             {
                 try
                 {
-                    List_of_persons = (List_Persons<Person>)xmlFormat.Deserialize(fStream);
+                    List_of_persons = (List<Person>)xmlFormat.Deserialize(fStream);
                 }
                 catch (Exception e)
                 {
@@ -69,9 +68,9 @@ namespace Учет_СИЗ
             }
         }
 
-        public void SerializingPersons(List_Persons<Person> List)
+        public void SerializingPersons(List<Person> List)
         {
-            XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
 
             using (Stream fStream = new FileStream(@"ListPersons.xml",
               FileMode.Create, FileAccess.Write, FileShare.None))

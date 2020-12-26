@@ -24,13 +24,14 @@ namespace Учет_СИЗ
     /// </summary>
     public partial class MainWindow : Window
     {
-        List_Persons<Person> list_of_persons = new List_Persons<Person>();
+        List<Person> list_of_persons = new List<Person>();
         public MainWindow()
         {
             InitializeComponent();
             DeserializingPersons();
-            foreach (Person per in list_of_persons.List_Of_Person)
+            foreach (Person per in list_of_persons)
             {
+                
                 StackPanel_Persona.Children.Add(new MyButton(per));
             }
 
@@ -45,12 +46,12 @@ namespace Учет_СИЗ
 
         public void DeserializingPersons()
         {            
-            XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
             using (Stream fStream = File.OpenRead(@"ListPersons.xml"))
             {
                 try
                 {
-                    list_of_persons = (List_Persons<Person>)xmlFormat.Deserialize(fStream);
+                    list_of_persons = (List<Person>)xmlFormat.Deserialize(fStream);
                 }
                 catch (Exception e)
                 {
@@ -61,9 +62,9 @@ namespace Учет_СИЗ
                 } 
             }
         }
-        public void SerializingPersons(List_Persons<Person> List)
+        public void SerializingPersons(List<Person> List)
         {
-            XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
+            XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
 
             using (Stream fStream = new FileStream(@"ListPersons.xml",
               FileMode.Create, FileAccess.Write, FileShare.None))
