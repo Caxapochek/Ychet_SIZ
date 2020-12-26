@@ -6,7 +6,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="600" Width="600">
+        Title="Personal Card" Height="600" Width="600" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
             <Setter Property="Height" Value="25"/>

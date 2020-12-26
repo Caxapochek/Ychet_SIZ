@@ -31,11 +31,21 @@ namespace Учет_СИЗ
             List_of_persons = list_of_persons;
             Person1 = person;
             Mode = mode;
-            List_of_persons.Remove(Person1);
+            if (!List_of_persons.Contains(Person1))
+            {
+                MessageBox.Show("Данный человек не найден!" + "\n" + "Обновите страницу и попробуйте еще раз.");
+                this.Close();
+                SerializingPersons(List_of_persons);
+            }
+            else
+            {
 
-            BtnSavePerson.IsEnabled = true;
-            BtnDeletePerson.IsEnabled = true;
-            BtnSavePerson.Content = "Сохранить";
+                BtnSavePerson.IsEnabled = true;
+                BtnDeletePerson.IsEnabled = true;
+                BtnSavePerson.Content = "Сохранить";
+                Fill();
+                this.Show();
+            }
         }
         public PersonalCard(List<Person> list_of_persons, string mode)
         {
@@ -48,22 +58,40 @@ namespace Учет_СИЗ
             BtnSavePerson.Content = "Добавить";
 
         }
-        
+
 
 
         private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
+            List_of_persons.Remove(Person1);
+
             Person1 = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
                 MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
                 ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
                 FacilityAdress.Text.ToString());
+
             List_of_persons.Add(Person1);
             SerializingPersons(List_of_persons);
 
             this.Close();
+
         }
 
-
+        private void Fill()
+        {
+            PersonalNumber.Text = Person1.Change_Personnel_Number;
+            FirstName.Text = Person1.Change_First_Name;
+            SecondName.Text = Person1.Change_Last_Name;
+            MiddleName.Text = Person1.Change_Middle_name;
+            Age.Text = Person1.Change_Age;
+            Gender.Text = Person1.Change_Gender;
+            Height.Text = Person1.Change_Height;
+            ClothingSize.Text = Person1.Change_Clothing_size;
+            Position.Text = Person1.Change_Position;
+            FIOChef.Text = Person1.Change_FIO_Chief;
+            Facility.Text = Person1.Change_Facility;
+            FacilityAdress.Text = Person1.Change_Facility_Address;
+        }
         private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
         {
             List_of_persons.Remove(Person1);

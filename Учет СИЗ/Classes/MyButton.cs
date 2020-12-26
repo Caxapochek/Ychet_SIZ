@@ -23,7 +23,6 @@ namespace Учет_СИЗ.Classes
         void MyButton_Click(object sender, EventArgs e)
         {
             PersonalCard AddWindow = new PersonalCard(List,PersonBtn,"Show");
-            AddWindow.Show();
 
         }        
     }
