@@ -22,13 +22,34 @@ namespace Учет_СИЗ
     /// </summary>
     public partial class PersonalCard : Window
     {
-        List_Persons<Person> list_of_persons = new List_Persons<Person>();
-        public PersonalCard()
+        List_Persons<Person> List_of_persons = new List_Persons<Person>();
+        string Mode;
+        public PersonalCard(List_Persons<Person> list_of_persons, string mode)
         {
             InitializeComponent();
             DeserializingPersons();
+            List_of_persons = list_of_persons;
+            list_of_persons
+        }
+        
+
+
+
+        private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
+        {
+            Person person = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
+                MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
+                ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
+                FacilityAdress.Text.ToString());
+            List_of_persons.AddAfter(person);
+            SerializingPersons(List_of_persons);
         }
 
+
+        private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         public void DeserializingPersons()
         {
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
@@ -36,7 +57,7 @@ namespace Учет_СИЗ
             {
                 try
                 {
-                    list_of_persons = (List_Persons<Person>)xmlFormat.Deserialize(fStream);
+                    List_of_persons = (List_Persons<Person>)xmlFormat.Deserialize(fStream);
                 }
                 catch (Exception e)
                 {
@@ -57,21 +78,6 @@ namespace Учет_СИЗ
             {
                 xmlFormat.Serialize(fStream, List);
             }
-        }
-
-        private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
-        {
-            Person person = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
-                MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
-                ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
-                FacilityAdress.Text.ToString());
-            list_of_persons.AddAfter(person);
-            SerializingPersons(list_of_persons);
-        }
-
-        private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

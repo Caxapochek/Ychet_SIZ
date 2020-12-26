@@ -24,37 +24,25 @@ namespace Учет_СИЗ
     /// </summary>
     public partial class MainWindow : Window
     {
-        public PersonalCard AddWindow = new PersonalCard();
         List_Persons<Person> list_of_persons = new List_Persons<Person>();
         public MainWindow()
         {
             InitializeComponent();
             DeserializingPersons();
+            foreach (Person per in list_of_persons.List_Of_Person)
+            {
+                StackPanel_Persona.Children.Add(new MyButton(per));
+            }
 
-            
-
-            //Button Btn1 = new Button();
-            //Btn1.Content = "11111111111";
-            //Btn1.Height = 100;
-            //Button Btn2 = new Button();
-            //Btn2.Content = "2222222222";
-            //Btn2.Height = 100;
-            //Button Btn3 = new Button();
-            //Btn3.Content = "3333333333";
-            //Btn3.Height = 100;
-            //Button Btn4 = new Button();
-            //Btn4.Content = "444";
-            //Btn4.Height = 100;
-            //StackPanel_Persona.Children.Add(Btn1);
-            //StackPanel_Persona.Children.Add(Btn2);
-            //StackPanel_Persona.Children.Add(Btn3);
-            //StackPanel_Persona.Children.Add(Btn4);
         }
 
         private void BtnAddPerson_Click(object sender, RoutedEventArgs e)
         {
+            PersonalCard AddWindow = new PersonalCard(list_of_persons);
             AddWindow.Show();
         }
+
+
         public void DeserializingPersons()
         {            
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));
@@ -70,16 +58,9 @@ namespace Учет_СИЗ
                     {
                         MessageBox.Show("Не удалось получить доступ к списку Person.");
                     });
-                }
-                
-                
-            }
-            foreach (Person per in list_of_persons.List_Of_Person)
-            {
-                StackPanel_Persona.Children.Add(new MyButton(per.Change_Last_Name + " " + per.Change_First_Name + " " + per.Change_Middle_name));
+                } 
             }
         }
-
         public void SerializingPersons(List_Persons<Person> List)
         {
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List_Persons<Person>));

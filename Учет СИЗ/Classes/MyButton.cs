@@ -9,9 +9,11 @@ namespace Учет_СИЗ.Classes
 {
     class MyButton : Button
     {
-        public MyButton(string MyContent)
+        public Person PersonBtn;
+        public MyButton(Person Person1)
         {
-            Content = MyContent;
+            PersonBtn = Person1;
+            Content = Person1.Change_Last_Name + " " + Person1.Change_First_Name + " " + Person1.Change_Middle_name;
         }
     }
 }
