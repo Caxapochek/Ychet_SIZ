@@ -145,7 +145,15 @@ namespace Учет_СИЗ {
         #line hidden
         
         
-        #line 77 "..\..\PersonalCard.xaml"
+        #line 74 "..\..\PersonalCard.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnAddItem;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 79 "..\..\PersonalCard.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnSavePerson;
         
@@ -153,7 +161,7 @@ namespace Учет_СИЗ {
         #line hidden
         
         
-        #line 82 "..\..\PersonalCard.xaml"
+        #line 84 "..\..\PersonalCard.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnDeletePerson;
         
@@ -230,18 +238,27 @@ namespace Учет_СИЗ {
             this.StackPanelInventory = ((System.Windows.Controls.StackPanel)(target));
             return;
             case 14:
-            this.BtnSavePerson = ((System.Windows.Controls.Button)(target));
+            this.BtnAddItem = ((System.Windows.Controls.Button)(target));
             
-            #line 80 "..\..\PersonalCard.xaml"
-            this.BtnSavePerson.Click += new System.Windows.RoutedEventHandler(this.BtnSavePerson_Click);
+            #line 77 "..\..\PersonalCard.xaml"
+            this.BtnAddItem.Click += new System.Windows.RoutedEventHandler(this.BtnAddItem_Click);
             
             #line default
             #line hidden
             return;
             case 15:
+            this.BtnSavePerson = ((System.Windows.Controls.Button)(target));
+            
+            #line 82 "..\..\PersonalCard.xaml"
+            this.BtnSavePerson.Click += new System.Windows.RoutedEventHandler(this.BtnSavePerson_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 16:
             this.BtnDeletePerson = ((System.Windows.Controls.Button)(target));
             
-            #line 85 "..\..\PersonalCard.xaml"
+            #line 87 "..\..\PersonalCard.xaml"
             this.BtnDeletePerson.Click += new System.Windows.RoutedEventHandler(this.BtnDeletePerson_Click);
             
             #line default

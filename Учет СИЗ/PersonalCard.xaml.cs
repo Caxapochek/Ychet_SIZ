@@ -25,7 +25,10 @@ namespace Учет_СИЗ
         List<Person> List_of_persons = new List<Person>();
         Person Person1;
         string Mode;                                                    //При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
-        public PersonalCard(List<Person> list_of_persons, Person person, string mode)
+        
+        //Конструкторы
+        
+        public PersonalCard(List<Person> list_of_persons, Person person, string mode) //show
         {
             InitializeComponent();
             List_of_persons = list_of_persons;
@@ -47,20 +50,22 @@ namespace Учет_СИЗ
                 this.Show();
             }
         }
-        public PersonalCard(List<Person> list_of_persons, string mode)
+        public PersonalCard(List<Person> list_of_persons, string mode) //add
         {
             InitializeComponent();
             List_of_persons = list_of_persons;
             Mode = mode;
 
             BtnDeletePerson.IsEnabled = false;
-            BtnSavePerson.IsEnabled = true;
+            BtnSavePerson.IsEnabled = true;  
             BtnSavePerson.Content = "Добавить";
 
+            this.Show();
         }
 
 
 
+        //Кнопки
         private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
             List_of_persons.Remove(Person1);
@@ -75,8 +80,23 @@ namespace Учет_СИЗ
 
             this.Close();
 
+        }        
+        private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
+        {
+            List_of_persons.Remove(Person1);
+            SerializingPersons(List_of_persons);
+            this.Close();
+        }
+        private void BtnAddItem_Click(object sender, RoutedEventArgs e)
+        {
+
+            ItemCard AddWindow = new ItemCard(Person1, "Add");
+            AddWindow.Show();
         }
 
+
+
+        //Методы
         private void Fill()
         {
             PersonalNumber.Text = Person1.Change_Personnel_Number;
@@ -91,12 +111,6 @@ namespace Учет_СИЗ
             FIOChef.Text = Person1.Change_FIO_Chief;
             Facility.Text = Person1.Change_Facility;
             FacilityAdress.Text = Person1.Change_Facility_Address;
-        }
-        private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
-        {
-            List_of_persons.Remove(Person1);
-            SerializingPersons(List_of_persons);
-            this.Close();
         }
         public void DeserializingPersons()
         {
@@ -127,5 +141,7 @@ namespace Учет_СИЗ
                 xmlFormat.Serialize(fStream, List);
             }
         }
+
+        
     }
 }

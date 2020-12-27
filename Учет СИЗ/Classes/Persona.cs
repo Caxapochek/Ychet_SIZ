@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
 {
@@ -24,6 +25,8 @@ namespace Учет_СИЗ
         private string Facility;        //Объект
         private string Facility_Address;//Адресс объекта
 
+        public List<Item> Items;       //Вещи
+
 
 
         //Свойства
@@ -34,7 +37,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Имя\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Имя\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Personnel_Number = "Н/Д";
                 }
                 else Personnel_Number = value;
@@ -47,7 +50,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Имя\" указано неверно!" +"\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Имя\" указано неверно!" +"\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     First_Name = "Н/Д";
                 }
                 else First_Name = value;
@@ -60,7 +63,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Фамилия\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Фамилия\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Last_Name = "Н/Д";
                 }
                 else Last_Name = value;
@@ -73,7 +76,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Отчество\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Отчество\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Middle_name = "Н/Д";
                 }
                 else Middle_name = value;
@@ -86,7 +89,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Возраст\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Возраст\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Age = "Н/Д";
                 }
                 else Age = value;
@@ -99,7 +102,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Пол\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Пол\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Gender = "Н/Д";
                 }
                 else Gender = value;
@@ -112,7 +115,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value) && value.Contains(' '))
                 {
-                    MessageBox.Show("\"Рост\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Рост\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Height = "Н/Д";
                 }
                 else Height = value;
@@ -125,7 +128,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Размер одежды\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Размер одежды\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
                     Clothing_size = "Н/Д";
                 }
                 else Clothing_size = value;
@@ -138,7 +141,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Должность\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Должность\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
                     Position = "Н/Д";
                 }
                 else Position = value;
@@ -151,7 +154,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Руководитель\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Руководитель\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
                     FIO_Chief = "Н/Д";
                 }
                 else FIO_Chief = value;
@@ -164,7 +167,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Объект\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Объект\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
                     Facility = "Н/Д";
                 }
                 else Facility = value;
@@ -177,7 +180,7 @@ namespace Учет_СИЗ
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    MessageBox.Show("\"Адрес объекта\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
+                    //MessageBox.Show("\"Адрес объекта\" указано неверно!" + "\n" + "Строка не должна быть пустой. Установлено значение \"Н/Д\"");
                     Facility_Address = "Н/Д";
                 }
                 else Facility_Address = value;

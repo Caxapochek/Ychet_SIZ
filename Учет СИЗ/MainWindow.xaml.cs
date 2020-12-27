@@ -32,7 +32,7 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 
-                StackPanel_Persona.Children.Add(new MyButton(ref list_of_persons, per));
+                StackPanel_Persona.Children.Add(new MyButton_Person(ref list_of_persons, per));
             }
 
         }
@@ -40,7 +40,6 @@ namespace Учет_СИЗ
         private void BtnAddPerson_Click(object sender, RoutedEventArgs e)
         {
             PersonalCard AddWindow = new PersonalCard(list_of_persons, "Add");
-            AddWindow.Show();
         }
 
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
@@ -50,7 +49,7 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
 
-                StackPanel_Persona.Children.Add(new MyButton(ref list_of_persons, per));
+                StackPanel_Persona.Children.Add(new MyButton_Person(ref list_of_persons, per));
             }
         }
 

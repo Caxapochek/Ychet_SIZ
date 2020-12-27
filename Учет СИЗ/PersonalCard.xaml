@@ -67,13 +67,15 @@
         </Grid>
         <ScrollViewer Grid.Row="1">
             <StackPanel x:Name="StackPanelInventory" Background="#FFF3F3F3">
-                <TextBlock Text="что-то 1"/>
-                <TextBlock Text="что-то 2"/>
-                <TextBlock Text="что-то 3"/>
-                <TextBlock Text="что-то 4"/>
+                
             </StackPanel>
         </ScrollViewer>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BtnAddItem" 
+                    Content="Добавить вещь" 
+                    Width="100"
+                    Click="BtnAddItem_Click" 
+                    Margin="10,10,240,10"/>
             <Button x:Name="BtnSavePerson" 
                     Content="Сохранить" 
                     Width="100"
@@ -85,6 +87,7 @@
                     Click="BtnDeletePerson_Click" 
                     Margin="10" 
                     Background="#FFFF4343"/>
+            
         </StackPanel>
 
     </Grid>

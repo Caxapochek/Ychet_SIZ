@@ -1,0 +1,63 @@
+﻿<Window x:Class="Учет_СИЗ.ItemCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Учет_СИЗ"
+        mc:Ignorable="d"
+        Title="ItemCard" Height="250" Width="300">
+    <Window.Resources>
+        <Style TargetType="Label" x:Key="Style_Label1">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="Style_TextBox1">
+            <Setter Property="Height" Value="21"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190*"/>
+                <ColumnDefinition Width="110*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Label Content="Название: " Style="{StaticResource Style_Label1}" />
+                <Label Content="Номенклатурный номер: " Style="{StaticResource Style_Label1}"/>
+                <Label Content="Количество: " Style="{StaticResource Style_Label1}"/>
+                <Label Content="Дата выдачи: " Style="{StaticResource Style_Label1}"/>
+                <Label Content="Срок службы: " Style="{StaticResource Style_Label1}"/>
+                <Label Content="Дата окончания срока службы: " Style="{StaticResource Style_Label1}"/>
+                </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="TBTitle" Style="{StaticResource Style_TextBox1}" />
+                <TextBox x:Name="TBItem_number" Style="{StaticResource Style_TextBox1}"/>
+                <TextBox x:Name="TBQuantity" Style="{StaticResource Style_TextBox1}"/>
+                <TextBox x:Name="TBDate_Of_Commissioning" Style="{StaticResource Style_TextBox1}"/>
+                <TextBox x:Name="TBService_Life" Style="{StaticResource Style_TextBox1}"/>
+                <TextBox x:Name="TBDate_Of_Decommissioning" Style="{StaticResource Style_TextBox1}"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button x:Name="BtnSavePerson" 
+                    Content="Сохранить" 
+                    Width="80"
+                    Height="20"
+                    Click="BtnSavePerson_Click" 
+                    Margin="10,20,0,10"/>
+            <Button x:Name="BtnDeletePerson" 
+                    Content="Удалить" 
+                    Width="80"
+                    Height="20"
+                    Click="BtnDeletePerson_Click" 
+                    Margin="200,20,10,10" 
+                    Background="#FFFF4343"/>
+        </Grid>
+    </Grid>
+</Window>
