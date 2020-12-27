@@ -1,17 +1,27 @@
 <?xml version="1.0"?>
 <ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Person>
-    <Change_Personnel_Number>123</Change_Personnel_Number>
+    <Items>
+      <Item>
+        <Title_GetSet>Куртка</Title_GetSet>
+        <Item_number_GetSet>178</Item_number_GetSet>
+        <Quantity_GetSet>1</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>12.02.20</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>2</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>12.02.22</Date_Of_Decommissioning_GetSet>
+      </Item>
+    </Items>
+    <Change_Personnel_Number>1</Change_Personnel_Number>
     <Change_First_Name>Илья</Change_First_Name>
     <Change_Last_Name>Сахаров</Change_Last_Name>
-    <Change_Middle_name>Дмитриевич</Change_Middle_name>
+    <Change_Middle_name>Дмитревич</Change_Middle_name>
     <Change_Age>20</Change_Age>
     <Change_Gender>М</Change_Gender>
     <Change_Height>167</Change_Height>
     <Change_Clothing_size>42</Change_Clothing_size>
-    <Change_Position>студент</Change_Position>
-    <Change_FIO_Chief>Якимова</Change_FIO_Chief>
-    <Change_Facility>Яргу</Change_Facility>
-    <Change_Facility_Address>Союзная 145</Change_Facility_Address>
+    <Change_Position>Студент</Change_Position>
+    <Change_FIO_Chief>Нежить</Change_FIO_Chief>
+    <Change_Facility>ЯрГУ</Change_Facility>
+    <Change_Facility_Address>Союзная,144</Change_Facility_Address>
   </Person>
 </ArrayOfPerson>

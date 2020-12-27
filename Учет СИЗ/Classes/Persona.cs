@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
@@ -11,7 +8,6 @@ namespace Учет_СИЗ
     [Serializable]
     public class Person 
     {
-        //Поля
         private string Personnel_Number;//Табельный номер
         private string First_Name;      //Имя
         private string Last_Name;       //Фамилия
@@ -24,12 +20,9 @@ namespace Учет_СИЗ
         private string FIO_Chief;       //Руководитель
         private string Facility;        //Объект
         private string Facility_Address;//Адресс объекта
-
         public List<Item> Items;       //Вещи
 
-
-
-        //Свойства
+        #region Свойства
         public string Change_Personnel_Number
         {
             get { return Personnel_Number; }
@@ -186,11 +179,9 @@ namespace Учет_СИЗ
                 else Facility_Address = value;
             }
         }
+        #endregion
 
-
-        //Методы
-
-        //Конструкторы
+        #region Конструкторы
         public Person()
         {
             Personnel_Number = "Н/Д";
@@ -207,7 +198,7 @@ namespace Учет_СИЗ
             Facility_Address = "Н/Д";
         }
         public Person(string personnel_Number,  string first_Name, string last_Name, string middle_name, string age, string gender, string height, string clothing_size,   
-        string position, string FIO_chief, string facility, string facility_Address)
+        string position, string FIO_chief, string facility, string facility_Address, List<Item> list)
         {
             Personnel_Number = personnel_Number;
             First_Name = first_Name;
@@ -221,7 +212,8 @@ namespace Учет_СИЗ
             FIO_Chief = FIO_chief;
             Facility = facility;
             Facility_Address = facility_Address;
+            this.Items = list;
         }
+        #endregion
     }
-
 }

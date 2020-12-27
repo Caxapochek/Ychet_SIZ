@@ -45,17 +45,17 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-            <Button x:Name="BtnSavePerson" 
+            <Button x:Name="BtnSaveItem" 
                     Content="Сохранить" 
                     Width="80"
                     Height="20"
-                    Click="BtnSavePerson_Click" 
+                    Click="BtnSaveItem_Click" 
                     Margin="10,20,0,10"/>
-            <Button x:Name="BtnDeletePerson" 
+            <Button x:Name="BtnDeleteItem" 
                     Content="Удалить" 
                     Width="80"
                     Height="20"
-                    Click="BtnDeletePerson_Click" 
+                    Click="BtnDeleteItem_Click" 
                     Margin="200,20,10,10" 
                     Background="#FFFF4343"/>
         </Grid>

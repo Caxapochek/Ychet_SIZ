@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Учет_СИЗ.Classes
+﻿namespace Учет_СИЗ.Classes
 {
     public class Item
     {
@@ -15,7 +9,7 @@ namespace Учет_СИЗ.Classes
         string Service_Life;
         string Date_Of_Decommissioning;
 
-        //Свойства
+        #region Свойства
         public string Title_GetSet
         {
             get { return Title; }
@@ -88,10 +82,9 @@ namespace Учет_СИЗ.Classes
                 else Date_Of_Decommissioning = value;
             }
         }
+        #endregion
 
-
-
-        //Конструкторы
+        #region Конструкторы
         public Item()
         {
             Title = "Н/Д";
@@ -110,5 +103,7 @@ namespace Учет_СИЗ.Classes
             Service_Life = service_Life;
             Date_Of_Decommissioning = date_Of_Decommissioning;
         }
+        #endregion
+
     }
 }

@@ -1,44 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
-{
-    /// <summary>
-    /// Логика взаимодействия для ItemCard.xaml
-    /// </summary>
+{   
     public partial class ItemCard : Window
     {
         Person Person1;
         Item Item1;
         string Mode;
 
-        //Конструкторы
-        public ItemCard(Person person,string mode) //add
+        #region Конструкторы
+        public ItemCard(ref Person person,string mode) //add
         {
             Person1 = person;
             Mode = mode;
             InitializeComponent();
-
-            BtnDeletePerson.IsEnabled = false;
-            BtnSavePerson.IsEnabled = true;
-            BtnSavePerson.Content = "Добавить";
-
-
+            BtnDeleteItem.IsEnabled = false;
+            BtnSaveItem.IsEnabled = true;
+            BtnSaveItem.Content = "Добавить";
             this.Show();
         }
-        public ItemCard(Person person, Item item, string mode) //show
+        public ItemCard(ref Person person,ref Item item, string mode) //show
         {
             Person1 = person;
             Item1 = item;
@@ -48,24 +30,37 @@ namespace Учет_СИЗ
             {
                 MessageBox.Show("Данная вещь не найдена!" + "\n" + "Обновите страницу и попробуйте еще раз.");
                 this.Close();
-                SerializingPersons(List_of_persons);// EL PROBLEMO
+                //SerializingPersons(List_of_persons);// EL PROBLEMO
             }
             else
             {
-
-                BtnDeletePerson.IsEnabled = true;
-                BtnSavePerson.IsEnabled = true;
-                BtnSavePerson.Content = "Сохранить";
+                BtnDeleteItem.IsEnabled = true;
+                BtnSaveItem.IsEnabled = true;
+                BtnSaveItem.Content = "Сохранить";
                 Fill();
                 this.Show();
             }
         }
+        #endregion
 
+        #region Кнопки
+        private void BtnSaveItem_Click(object sender, RoutedEventArgs e)
+        {
+            Person1.Items.Remove(Item1);
+            Item1 = new Item(TBTitle.Text.ToString(), TBItem_number.Text.ToString(), TBQuantity.Text.ToString(), 
+                TBDate_Of_Commissioning.Text.ToString(), TBService_Life.Text.ToString(), 
+                TBDate_Of_Decommissioning.Text.ToString());
+            Person1.Items.Add(Item1);
+            this.Close();
+        }
+        private void BtnDeleteItem_Click(object sender, RoutedEventArgs e)
+        {
+            Person1.Items.Remove(Item1);
+            this.Close();
+        }
+        #endregion
 
-        //Кнопки
-
-
-        //Методы
+        #region  Методы
         private void Fill()
         {
             TBTitle.Text = Item1.Title_GetSet;
@@ -75,5 +70,7 @@ namespace Учет_СИЗ
             TBService_Life.Text = Item1.Service_Life_GetSet;
             TBDate_Of_Decommissioning.Text = Item1.Date_Of_Decommissioning_GetSet;
         }
+        #endregion
+
     }
 }

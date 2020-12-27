@@ -42,3 +42,23 @@ W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ (
 W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ (1)\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
 W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\PersonalCard.g.cs
 W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\PersonalCard.baml
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csprojAssemblyReference.cache
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\ItemCard.g.cs
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\MainWindow.g.cs
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\PersonalCard.g.cs
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\App.g.cs
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.cache
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.lref
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.exe
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.pdb
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe.config
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\bin\Debug\Учет СИЗ.pdb
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\App.baml
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\ItemCard.baml
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\MainWindow.baml
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\PersonalCard.baml
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.g.resources
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет_СИЗ.Properties.Resources.resources
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResource.cache
+C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache

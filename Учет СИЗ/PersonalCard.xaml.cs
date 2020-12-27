@@ -1,34 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Xml.Serialization;
 using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
 {
-    /// <summary>
-    /// Логика взаимодействия для PersonalCard.xaml
-    /// </summary>
     public partial class PersonalCard : Window
     {
         List<Person> List_of_persons = new List<Person>();
         Person Person1;
-        string Mode;                                                    //При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
-        
-        //Конструкторы
-        
-        public PersonalCard(List<Person> list_of_persons, Person person, string mode) //show
+        string Mode;//При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
+
+        #region Конструкторы
+        public PersonalCard(ref List<Person> list_of_persons, ref Person person, string mode) //show
         {
             InitializeComponent();
             List_of_persons = list_of_persons;
@@ -42,7 +29,6 @@ namespace Учет_СИЗ
             }
             else
             {
-
                 BtnSavePerson.IsEnabled = true;
                 BtnDeletePerson.IsEnabled = true;
                 BtnSavePerson.Content = "Сохранить";
@@ -50,36 +36,29 @@ namespace Учет_СИЗ
                 this.Show();
             }
         }
-        public PersonalCard(List<Person> list_of_persons, string mode) //add
+        public PersonalCard(ref List<Person> list_of_persons, string mode) //add
         {
             InitializeComponent();
             List_of_persons = list_of_persons;
             Mode = mode;
-
             BtnDeletePerson.IsEnabled = false;
             BtnSavePerson.IsEnabled = true;  
             BtnSavePerson.Content = "Добавить";
-
             this.Show();
         }
+        #endregion
 
-
-
-        //Кнопки
+        #region Кнопки
         private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
             List_of_persons.Remove(Person1);
-
             Person1 = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
                 MiddleName.Text.ToString(), Age.Text.ToString(), Gender.Text.ToString(), Height.Text.ToString(),
                 ClothingSize.Text.ToString(), Position.Text.ToString(), FIOChef.Text.ToString(), Facility.Text.ToString(),
-                FacilityAdress.Text.ToString());
-
+                FacilityAdress.Text.ToString(), Person1.Items);
             List_of_persons.Add(Person1);
             SerializingPersons(List_of_persons);
-
             this.Close();
-
         }        
         private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
         {
@@ -89,14 +68,16 @@ namespace Учет_СИЗ
         }
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
-
-            ItemCard AddWindow = new ItemCard(Person1, "Add");
-            AddWindow.Show();
+            ItemCard AddWindow = new ItemCard(ref Person1, "Add");
         }
+        private  void BtnUpdateItems_Click(object sender, RoutedEventArgs e)
+        {
+            StackPanel_Inventory.Children.Clear();
+            Fill();
+        }
+        #endregion
 
-
-
-        //Методы
+        #region Методы
         private void Fill()
         {
             PersonalNumber.Text = Person1.Change_Personnel_Number;
@@ -111,6 +92,10 @@ namespace Учет_СИЗ
             FIOChef.Text = Person1.Change_FIO_Chief;
             Facility.Text = Person1.Change_Facility;
             FacilityAdress.Text = Person1.Change_Facility_Address;
+            foreach (Item it in Person1.Items)
+            {
+                StackPanel_Inventory.Children.Add(new MyButton_Item(ref Person1, it));
+            }
         }
         public void DeserializingPersons()
         {
@@ -130,7 +115,6 @@ namespace Учет_СИЗ
                 }
             }
         }
-
         public void SerializingPersons(List<Person> List)
         {
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
@@ -141,7 +125,7 @@ namespace Учет_СИЗ
                 xmlFormat.Serialize(fStream, List);
             }
         }
+        #endregion
 
-        
     }
 }
