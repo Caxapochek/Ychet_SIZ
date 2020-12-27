@@ -5,12 +5,13 @@ using System.Windows;
 using System.Xml.Serialization;
 using System.IO;
 using Учет_СИЗ.Classes;
+using System.Windows.Input;
 
 namespace Учет_СИЗ
 {
     public partial class MainWindow : Window
     {
-        List<Person> list_of_persons = new List<Person>();
+        List<Person> list_of_persons = new List<Person>();        
 
         #region конструктор
         public MainWindow()
@@ -36,7 +37,16 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 StackPanel_Persona.Children.Add(new MyButton_Person(ref list_of_persons, per));
-            }
+            }            
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            SerializingPersons(list_of_persons);
+            Application.Current.Shutdown();
         }
         #endregion
 
@@ -71,5 +81,6 @@ namespace Учет_СИЗ
         }
         #endregion
 
+        
     }
 }

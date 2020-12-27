@@ -41,7 +41,7 @@ namespace Учет_СИЗ
             get { return First_Name; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Имя\" указано неверно!" +"\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     First_Name = "Н/Д";
@@ -54,7 +54,7 @@ namespace Учет_СИЗ
             get { return Last_Name; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Фамилия\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Last_Name = "Н/Д";
@@ -67,7 +67,7 @@ namespace Учет_СИЗ
             get { return Middle_name; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Отчество\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Middle_name = "Н/Д";
@@ -80,7 +80,7 @@ namespace Учет_СИЗ
             get { return Age; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Возраст\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Age = "Н/Д";
@@ -93,7 +93,7 @@ namespace Учет_СИЗ
             get { return Gender; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Пол\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Gender = "Н/Д";
@@ -106,7 +106,7 @@ namespace Учет_СИЗ
             get { return Height; }
             set
             {
-                if (string.IsNullOrEmpty(value) && value.Contains(' '))
+                if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Рост\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
                     Height = "Н/Д";

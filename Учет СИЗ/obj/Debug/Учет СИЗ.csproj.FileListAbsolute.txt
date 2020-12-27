@@ -62,3 +62,5 @@ C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.g
 C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет_СИЗ.Properties.Resources.resources
 C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResource.cache
 C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
+W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\ItemCard.g.cs
+W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\ItemCard.baml

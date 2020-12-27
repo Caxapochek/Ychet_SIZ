@@ -1,13 +1,14 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
 {   
     public partial class ItemCard : Window
     {
-        Person Person1;
-        Item Item1;
-        string Mode;
+        private Person Person1;
+        private Item Item1;
+        private string Mode;
 
         #region Конструкторы
         public ItemCard(ref Person person,string mode) //add
@@ -57,6 +58,10 @@ namespace Учет_СИЗ
         {
             Person1.Items.Remove(Item1);
             this.Close();
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
         #endregion
 

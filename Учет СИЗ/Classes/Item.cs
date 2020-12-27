@@ -2,12 +2,12 @@
 {
     public class Item
     {
-        string Title;
-        string Item_number;
-        string Quantity;
-        string Date_Of_Commissioning;
-        string Service_Life;
-        string Date_Of_Decommissioning;
+        private string Title;
+        private string Item_number;
+        private string Quantity;
+        private string Date_Of_Commissioning;
+        private string Service_Life;
+        private string Date_Of_Decommissioning;
 
         #region Свойства
         public string Title_GetSet

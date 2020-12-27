@@ -18,6 +18,7 @@ namespace Учет_СИЗ.Classes
 
         void MyButton_Click(object sender, EventArgs e)
         {
+            this.IsEnabled = false;
             ItemCard AddWindow_Item = new ItemCard(ref person,ref item, "Show");
         }
     }

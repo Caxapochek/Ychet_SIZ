@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" MinWidth="500" MinHeight="300">
+        Title="MainWindow" Height="500" Width="800" MinWidth="500" MinHeight="300" 
+        ResizeMode="NoResize" WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -17,13 +19,15 @@
             <Button x:Name="BtnAddPerson" Content="Добавить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnAddPerson_Click">
 
             </Button>
-
             <Button x:Name="BtnUpdate" Content="Обновить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnUpdate_Click">
+
+            </Button>
+            <Button x:Name="BtnExit" Content = "Закрыть" Margin="600,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFF4343">
 
             </Button>
         </StackPanel>
 
-        <Grid Grid.Row="2" ScrollViewer.CanContentScroll="True">
+        <Grid Grid.Row="2" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
             <ScrollViewer>
                 <StackPanel x:Name="StackPanel_Persona" ScrollViewer.CanContentScroll="True" CanVerticallyScroll="True" CanHorizontallyScroll="True"/>
             </ScrollViewer>

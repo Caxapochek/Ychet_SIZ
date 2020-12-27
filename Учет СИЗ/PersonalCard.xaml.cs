@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using System.Xml.Serialization;
 using Учет_СИЗ.Classes;
 
@@ -10,9 +11,9 @@ namespace Учет_СИЗ
 {
     public partial class PersonalCard : Window
     {
-        List<Person> List_of_persons = new List<Person>();
-        Person Person1;
-        string Mode;//При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
+        private List<Person> List_of_persons = new List<Person>();
+        private Person Person1;
+        private string Mode;//При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
 
         #region Конструкторы
         public PersonalCard(ref List<Person> list_of_persons, ref Person person, string mode) //show
@@ -41,6 +42,7 @@ namespace Учет_СИЗ
             InitializeComponent();
             List_of_persons = list_of_persons;
             Mode = mode;
+            Person1 = new Person();
             BtnDeletePerson.IsEnabled = false;
             BtnSavePerson.IsEnabled = true;  
             BtnSavePerson.Content = "Добавить";
@@ -74,6 +76,10 @@ namespace Учет_СИЗ
         {
             StackPanel_Inventory.Children.Clear();
             Fill();
+        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
         #endregion
 

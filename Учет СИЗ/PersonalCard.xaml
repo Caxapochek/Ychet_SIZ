@@ -6,7 +6,9 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="600" Width="600" ResizeMode="NoResize">
+        Title="Personal Card" Height="600" Width="600" 
+        ResizeMode="NoResize" WindowStyle="None"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
             <Setter Property="Height" Value="25"/>
@@ -65,8 +67,8 @@
                 <TextBox x:Name="ClothingSize" Style="{StaticResource Style_TextBox1}"/>
             </StackPanel>
         </Grid>
-        <ScrollViewer Grid.Row="1">
-            <StackPanel x:Name="StackPanel_Inventory" Background="#FFF3F3F3">
+        <ScrollViewer Grid.Row="1" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
+            <StackPanel x:Name="StackPanel_Inventory" >
             </StackPanel>
         </ScrollViewer>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">

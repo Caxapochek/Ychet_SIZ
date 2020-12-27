@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="ItemCard" Height="250" Width="300">
+        Title="ItemCard" Height="250" Width="300"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
             <Setter Property="Height" Value="25"/>
