@@ -6,9 +6,17 @@
         <Title_GetSet>Куртка</Title_GetSet>
         <Item_number_GetSet>178</Item_number_GetSet>
         <Quantity_GetSet>1</Quantity_GetSet>
-        <Date_Of_Commissioning_GetSet>12.02.20</Date_Of_Commissioning_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
         <Service_Life_GetSet>2</Service_Life_GetSet>
-        <Date_Of_Decommissioning_GetSet>12.02.22</Date_Of_Decommissioning_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
+      <Item>
+        <Title_GetSet>Н/Д</Title_GetSet>
+        <Item_number_GetSet>Н/Д</Item_number_GetSet>
+        <Quantity_GetSet>Н/Д</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
       </Item>
     </Items>
     <Change_Personnel_Number>1</Change_Personnel_Number>

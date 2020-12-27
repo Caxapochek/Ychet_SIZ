@@ -1,4 +1,6 @@
-﻿namespace Учет_СИЗ.Classes
+﻿using System.Text.RegularExpressions;
+
+namespace Учет_СИЗ.Classes
 {
     public class Item
     {
@@ -15,7 +17,8 @@
             get { return Title; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                Regex regex = new Regex(@"^[А-Я][а-я]+$");
+                if (!regex.IsMatch(value))
                 {
                     Title = "Н/Д";
                 }
@@ -51,7 +54,8 @@
             get { return Date_Of_Commissioning; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                Regex regex = new Regex(@"^\d\d[.]\d\d[.]\d\d$");
+                if (!regex.IsMatch(value))
                 {
                     Date_Of_Commissioning = "Н/Д";
                 }
@@ -72,10 +76,12 @@
         }
         public string Date_Of_Decommissioning_GetSet
         {
+
             get { return Date_Of_Decommissioning; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                Regex regex = new Regex(@"^\d\d[.]\d\d[.]\d\d$");
+                if (!regex.IsMatch(value))
                 {
                     Date_Of_Decommissioning = "Н/Д";
                 }
@@ -96,12 +102,12 @@
         }
         public Item(string title,string item_number,string quantity,string date_Of_Commissioning,string service_Life,string date_Of_Decommissioning)
         {
-            Title = title;
-            Item_number = item_number;
-            Quantity = quantity;
-            Date_Of_Commissioning = date_Of_Commissioning;
-            Service_Life = service_Life;
-            Date_Of_Decommissioning = date_Of_Decommissioning;
+            Title_GetSet = title;
+            Item_number_GetSet = item_number;
+            Quantity_GetSet = quantity;
+            Date_Of_Commissioning_GetSet = date_Of_Commissioning;
+            Service_Life_GetSet = service_Life;
+            Date_Of_Decommissioning_GetSet = date_Of_Decommissioning;
         }
         #endregion
 
