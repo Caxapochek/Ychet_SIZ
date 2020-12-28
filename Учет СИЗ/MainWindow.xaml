@@ -7,12 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" MinWidth="500" MinHeight="300" 
         ResizeMode="NoResize" WindowStyle="None"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0.301"/>
+            <GradientStop Color="#FFA9CDFF"/>
+            <GradientStop Color="White" Offset="0.92"/>
+            <GradientStop Color="#FFA9CDFF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -22,12 +32,25 @@
             <Button x:Name="BtnUpdate" Content="Обновить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnUpdate_Click">
 
             </Button>
-            <Button x:Name="BtnExit" Content = "Закрыть" Margin="600,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFF4343">
+            <Button x:Name="BtnExit" Content = "Закрыть" Margin="600,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFFBEBE">
 
             </Button>
         </StackPanel>
 
-        <Grid Grid.Row="2" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Табельный №" Background="#FFEBF3FF"/>
+            <Button Grid.Column="1" Content="ФИО" Background="#FFEBF3FF"/>
+            <Button Grid.Column="2" Content="Должность" Background="#FFEBF3FF"/>
+            <Button Grid.Column="3" Content="Объект" Background="#FFEBF3FF"/>
+        </Grid>
+
+        <Grid Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
             <ScrollViewer>
                 <StackPanel x:Name="StackPanel_Persona" ScrollViewer.CanContentScroll="True" CanVerticallyScroll="True" CanHorizontallyScroll="True"/>
             </ScrollViewer>

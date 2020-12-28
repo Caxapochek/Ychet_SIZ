@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Xml.Serialization;
 using Учет_СИЗ.Classes;
 
@@ -100,7 +102,8 @@ namespace Учет_СИЗ
             FacilityAdress.Text = Person1.Change_Facility_Address;
             foreach (Item it in Person1.Items)
             {
-                StackPanel_Inventory.Children.Add(new MyButton_Item(ref Person1, it));
+                MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it) };
+                StackPanel_Inventory.Children.Add(BtnItem);
             }
         }
         public void DeserializingPersons()
@@ -130,6 +133,40 @@ namespace Учет_СИЗ
             {
                 xmlFormat.Serialize(fStream, List);
             }
+        }
+        private Grid MakeGrid(Item item)
+        {
+            Grid grid = new Grid();
+            grid.Height = 30;
+            grid.Width = 800;
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(150) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(125) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(125) });
+
+            Label LabelTitle = new Label { Content = item.Title_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelItem_number = new Label { Content = item.Item_number_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelQuantity = new Label { Content = item.Quantity_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelDate_Of_Commissioning = new Label { Content = item.Date_Of_Commissioning_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelService_Life = new Label { Content = item.Service_Life_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelDate_Of_Decommissioning = new Label { Content = item.Date_Of_Decommissioning_GetSet, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+
+            grid.Children.Add(LabelTitle);
+            Grid.SetColumn(LabelTitle, 0);
+            grid.Children.Add(LabelItem_number);
+            Grid.SetColumn(LabelItem_number, 1);
+            grid.Children.Add(LabelQuantity);
+            Grid.SetColumn(LabelQuantity, 2);
+            grid.Children.Add(LabelDate_Of_Commissioning);
+            Grid.SetColumn(LabelDate_Of_Commissioning, 3);
+            grid.Children.Add(LabelService_Life);
+            Grid.SetColumn(LabelService_Life, 4);
+            grid.Children.Add(LabelDate_Of_Decommissioning);
+            Grid.SetColumn(LabelDate_Of_Decommissioning, 5);
+
+            return grid;
         }
         #endregion
 
