@@ -29,10 +29,7 @@
             <Button x:Name="BtnAddPerson" Content="Добавить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnAddPerson_Click">
 
             </Button>
-            <Button x:Name="BtnUpdate" Content="Обновить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnUpdate_Click">
-
-            </Button>
-            <Button x:Name="BtnExit" Content = "Закрыть" Margin="600,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFFBEBE">
+            <Button x:Name="BtnExit" Content = "Закрыть" Margin="670,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFFBEBE">
 
             </Button>
         </StackPanel>

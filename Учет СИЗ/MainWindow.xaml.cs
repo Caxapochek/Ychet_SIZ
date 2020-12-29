@@ -24,6 +24,7 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) {Content = MakeGrid(per) };
+                BtnPerson.AddWindow.Closed += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -33,17 +34,10 @@ namespace Учет_СИЗ
         private void BtnAddPerson_Click(object sender, RoutedEventArgs e)
         {
             PersonalCard AddWindow = new PersonalCard(ref list_of_persons, "Add");
+            AddWindow.Closed += Update;
+            AddWindow.Show();
         }
-        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
-        {
-            StackPanel_Persona.Children.Clear();
-            DeserializingPersons();
-            foreach (Person per in list_of_persons)
-            {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
-                StackPanel_Persona.Children.Add(BtnPerson);
-            }            
-        }
+        
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
@@ -109,6 +103,17 @@ namespace Учет_СИЗ
             Grid.SetColumn(LabelFacility, 3);
 
             return grid;
+        }
+        private void Update(object sender, EventArgs e)
+        {
+            StackPanel_Persona.Children.Clear();
+            DeserializingPersons();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.Closed += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
         }
         #endregion
 

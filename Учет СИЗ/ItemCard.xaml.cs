@@ -19,7 +19,6 @@ namespace Учет_СИЗ
             BtnDeleteItem.IsEnabled = false;
             BtnSaveItem.IsEnabled = true;
             BtnSaveItem.Content = "Добавить";
-            this.Show();
         }
         public ItemCard(ref Person person,ref Item item, string mode) //show
         {
@@ -39,7 +38,6 @@ namespace Учет_СИЗ
                 BtnSaveItem.IsEnabled = true;
                 BtnSaveItem.Content = "Сохранить";
                 Fill();
-                this.Show();
             }
         }
         #endregion

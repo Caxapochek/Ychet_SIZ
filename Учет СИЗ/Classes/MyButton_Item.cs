@@ -7,19 +7,19 @@ namespace Учет_СИЗ.Classes
     {
         public Person person;
         public Item item;
+        public ItemCard AddWindow_Item;
 
         public MyButton_Item(ref Person person, Item item)
         {
             this.person = person;
             this.item = item;
-            Content = item.Title_GetSet;
             Click += MyButton_Click;
+            AddWindow_Item = new ItemCard(ref person, ref item, "Show");
         }
 
         void MyButton_Click(object sender, EventArgs e)
         {
-            this.IsEnabled = false;
-            ItemCard AddWindow_Item = new ItemCard(ref person,ref item, "Show");
+            AddWindow_Item.Show();
         }
     }
 }

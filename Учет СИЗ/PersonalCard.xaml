@@ -105,12 +105,7 @@
                     Content="Добавить вещь" 
                     Width="100"
                     Click="BtnAddItem_Click" 
-                    Margin="10,10,0,10"/>
-            <Button x:Name="BtnUpdateItems" 
-                    Content="Обновить карточку" 
-                    Width="120"
-                    Click="BtnUpdateItems_Click" 
-                    Margin="10,10,125,10"/>
+                    Margin="10,10,255,10"/>            
             <Button x:Name="BtnSavePerson" 
                     Content="Сохранить" 
                     Width="100"

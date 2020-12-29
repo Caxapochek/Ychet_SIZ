@@ -69,7 +69,7 @@
                     Height="20"
                     Click="BtnDeleteItem_Click" 
                     Margin="200,20,10,10" 
-                    Background="#FFFF4343"/>
+                    Background="#FFFFBEBE"/>
         </Grid>
     </Grid>
 </Window>

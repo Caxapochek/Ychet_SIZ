@@ -36,7 +36,6 @@ namespace Учет_СИЗ
                 BtnDeletePerson.IsEnabled = true;
                 BtnSavePerson.Content = "Сохранить";
                 Fill();
-                this.Show();
             }
         }
         public PersonalCard(ref List<Person> list_of_persons, string mode) //add
@@ -73,8 +72,10 @@ namespace Учет_СИЗ
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
             ItemCard AddWindow = new ItemCard(ref Person1, "Add");
+            AddWindow.Closed += Update;
+            AddWindow.Show();
         }
-        private  void BtnUpdateItems_Click(object sender, RoutedEventArgs e)
+        private  void Update(object sender, EventArgs e)
         {
             StackPanel_Inventory.Children.Clear();
             Fill();
@@ -103,6 +104,7 @@ namespace Учет_СИЗ
             foreach (Item it in Person1.Items)
             {
                 MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it) };
+                BtnItem.AddWindow_Item.Closed += Update;
                 StackPanel_Inventory.Children.Add(BtnItem);
             }
         }
