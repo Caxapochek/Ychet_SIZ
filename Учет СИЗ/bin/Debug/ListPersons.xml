@@ -25,22 +25,47 @@
     <Change_Facility_Address>Монреаль</Change_Facility_Address>
   </Person>
   <Person>
-    <Items />
-    <Change_Personnel_Number>123</Change_Personnel_Number>
-    <Change_First_Name>ыв</Change_First_Name>
-    <Change_Last_Name>рар</Change_Last_Name>
-    <Change_Middle_name>фв</Change_Middle_name>
-    <Change_Age>Н/Д</Change_Age>
-    <Change_Gender>Н/Д</Change_Gender>
-    <Change_Height>Н/Д</Change_Height>
-    <Change_Clothing_size>Н/Д</Change_Clothing_size>
-    <Change_Position>вфф</Change_Position>
-    <Change_FIO_Chief>вф</Change_FIO_Chief>
-    <Change_Facility>Н/Д</Change_Facility>
-    <Change_Facility_Address>Н/Д</Change_Facility_Address>
-  </Person>
-  <Person>
     <Items>
+      <Item>
+        <Title_GetSet>Штаны</Title_GetSet>
+        <Item_number_GetSet>Н/Д</Item_number_GetSet>
+        <Quantity_GetSet>2</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
+      <Item>
+        <Title_GetSet>Куртка</Title_GetSet>
+        <Item_number_GetSet>178</Item_number_GetSet>
+        <Quantity_GetSet>2</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>20.02.19</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>3</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
+      <Item>
+        <Title_GetSet>Пила</Title_GetSet>
+        <Item_number_GetSet>Н/Д</Item_number_GetSet>
+        <Quantity_GetSet>Н/Д</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
+      <Item>
+        <Title_GetSet>Шапк</Title_GetSet>
+        <Item_number_GetSet>3</Item_number_GetSet>
+        <Quantity_GetSet>1</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
+      <Item>
+        <Title_GetSet>Н/Д</Title_GetSet>
+        <Item_number_GetSet>пв</Item_number_GetSet>
+        <Quantity_GetSet>ап</Quantity_GetSet>
+        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
+        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
+        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
+      </Item>
       <Item>
         <Title_GetSet>Н/Д</Title_GetSet>
         <Item_number_GetSet>Н/Д</Item_number_GetSet>
@@ -49,32 +74,8 @@
         <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
         <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
       </Item>
-      <Item>
-        <Title_GetSet>Штаны</Title_GetSet>
-        <Item_number_GetSet>Н/Д</Item_number_GetSet>
-        <Quantity_GetSet>3</Quantity_GetSet>
-        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
-        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
-        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
-      </Item>
-      <Item>
-        <Title_GetSet>Куртка</Title_GetSet>
-        <Item_number_GetSet>178</Item_number_GetSet>
-        <Quantity_GetSet>1</Quantity_GetSet>
-        <Date_Of_Commissioning_GetSet>20.02.19</Date_Of_Commissioning_GetSet>
-        <Service_Life_GetSet>3</Service_Life_GetSet>
-        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
-      </Item>
-      <Item>
-        <Title_GetSet>Шапка</Title_GetSet>
-        <Item_number_GetSet>3</Item_number_GetSet>
-        <Quantity_GetSet>1</Quantity_GetSet>
-        <Date_Of_Commissioning_GetSet>Н/Д</Date_Of_Commissioning_GetSet>
-        <Service_Life_GetSet>Н/Д</Service_Life_GetSet>
-        <Date_Of_Decommissioning_GetSet>Н/Д</Date_Of_Decommissioning_GetSet>
-      </Item>
     </Items>
-    <Change_Personnel_Number>3</Change_Personnel_Number>
+    <Change_Personnel_Number>6</Change_Personnel_Number>
     <Change_First_Name>Илья</Change_First_Name>
     <Change_Last_Name>Сахаров</Change_Last_Name>
     <Change_Middle_name>Дмитревич</Change_Middle_name>

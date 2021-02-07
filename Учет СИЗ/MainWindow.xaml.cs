@@ -24,7 +24,8 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) {Content = MakeGrid(per) };
-                BtnPerson.AddWindow.Closed += Update;
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -34,7 +35,8 @@ namespace Учет_СИЗ
         private void BtnAddPerson_Click(object sender, RoutedEventArgs e)
         {
             PersonalCard AddWindow = new PersonalCard(ref list_of_persons, "Add");
-            AddWindow.Closed += Update;
+            AddWindow.BtnSavePerson.Click += Update;
+            AddWindow.BtnDeletePerson.Click += Update;
             AddWindow.Show();
         }
         
@@ -111,7 +113,8 @@ namespace Учет_СИЗ
             foreach (Person per in list_of_persons)
             {
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
-                BtnPerson.AddWindow.Closed += Update;
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }

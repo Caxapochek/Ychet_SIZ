@@ -52,7 +52,7 @@ namespace Учет_СИЗ
         #endregion
 
         #region Кнопки
-        private void BtnSavePerson_Click(object sender, RoutedEventArgs e)
+        public void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
             List_of_persons.Remove(Person1);
             Person1 = new Person(PersonalNumber.Text.ToString(), FirstName.Text.ToString(), SecondName.Text.ToString(),
@@ -72,7 +72,8 @@ namespace Учет_СИЗ
         private void BtnAddItem_Click(object sender, RoutedEventArgs e)
         {
             ItemCard AddWindow = new ItemCard(ref Person1, "Add");
-            AddWindow.Closed += Update;
+            AddWindow.BtnSaveItem.Click += Update;
+            AddWindow.BtnDeleteItem.Click += Update;
             AddWindow.Show();
         }
         private  void Update(object sender, EventArgs e)
@@ -104,7 +105,8 @@ namespace Учет_СИЗ
             foreach (Item it in Person1.Items)
             {
                 MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it) };
-                BtnItem.AddWindow_Item.Closed += Update;
+                BtnItem.AddWindow_Item.BtnDeleteItem.Click += Update;
+                BtnItem.AddWindow_Item.BtnSaveItem.Click += Update;
                 StackPanel_Inventory.Children.Add(BtnItem);
             }
         }

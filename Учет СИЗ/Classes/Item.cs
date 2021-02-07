@@ -17,7 +17,7 @@ namespace Учет_СИЗ.Classes
             get { return Title; }
             set
             {
-                Regex regex = new Regex(@"^[А-Я][а-я]+$");
+                Regex regex = new Regex(@"^[А-Я]?[а-я]+$");
                 if (!regex.IsMatch(value))
                 {
                     Title = "Н/Д";
