@@ -82,27 +82,29 @@ namespace Учет_СИЗ
         }
         private Grid MakeGrid(Person person)
         {
-            Grid grid = new Grid();
-            grid.Height = 30;
-            grid.Width = 800;
+            Grid grid = new Grid{Height = 30,Width = 1000};
             grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100)});
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(300) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(150) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(350) });
             grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(250) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(200) });
 
-            Label LabelPersonnel_Number = new Label { Content = person.Change_Personnel_Number, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelFIO = new Label { Content = person.Change_Last_Name + " " +person.Change_First_Name + " " + person.Change_Middle_name, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelPosition = new Label { Content = person.Change_Position, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelFacility = new Label { Content = person.Change_Facility, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelPersonalCardNumber = new Label { Content = person.Change_Personal_Card_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelPersonnelNumber = new Label { Content = person.Change_Personnel_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelFIO = new Label { Content = person.Change_Last_Name+ " " + person.Change_First_Name + " " + person.Change_Middle_Name, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelPosition = new Label { Content = person.Change_Position, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelFIOChief = new Label { Content = person.Change_FIO_Chief, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
 
-            grid.Children.Add(LabelPersonnel_Number);
-            Grid.SetColumn(LabelPersonnel_Number, 0);
+            grid.Children.Add(LabelPersonalCardNumber);
+            Grid.SetColumn(LabelPersonalCardNumber, 0);
+            grid.Children.Add(LabelPersonnelNumber);
+            Grid.SetColumn(LabelPersonnelNumber, 1);
             grid.Children.Add(LabelFIO);
-            Grid.SetColumn(LabelFIO, 1);
+            Grid.SetColumn(LabelFIO, 2);
             grid.Children.Add(LabelPosition);
-            Grid.SetColumn(LabelPosition, 2);
-            grid.Children.Add(LabelFacility);
-            Grid.SetColumn(LabelFacility, 3);
+            Grid.SetColumn(LabelPosition, 3);
+            grid.Children.Add(LabelFIOChief);
+            Grid.SetColumn(LabelFIOChief, 4);
 
             return grid;
         }

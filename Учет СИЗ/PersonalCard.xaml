@@ -6,125 +6,202 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="650" Width="1000" 
+        Title="Personal Card" Height="800" Width="1000" 
         ResizeMode="NoResize" WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
             <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Text_Block1">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Background" Value="White"/>
         </Style>
         <Style TargetType="TextBox" x:Key="Style_TextBox1">
-            <Setter Property="Height" Value="31"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="16"/>
         </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="260"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Личная карточка №" Style="{StaticResource Style_Label1}" />
-                <TextBox x:Name="PersonalNumber" Style="{StaticResource Style_TextBox1}" />
+                <TextBox x:Name="PersonalCardNumber" Width="120" Style="{StaticResource Style_TextBox1}" />
                 <Label Content="учета выдачи СИЗ" Style="{StaticResource Style_Label1}" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150*" />
-                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="650*" />
+                <ColumnDefinition Width="350*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Фамилия" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="SecondName" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Фамилия" Width="80" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="SecondName" Width="470" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Имя" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="FirstName" Style="{StaticResource Style_TextBox1}"/>
-                    <Label Content="Отчество" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="MiddleName" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Имя" Width="50" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="FirstName" Width="190" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Отчество" Width="80" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="MiddleName" Width="226" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
-                <!--<Label Content="Номер карточки" Style="{StaticResource Style_Label1}" />
-                <Label Content="Фамилия: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Имя: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Отчество: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Должность: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Руководитель: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Объект: " Style="{StaticResource Style_Label1}"/>
-                <Label  Content="Адресс объекта: " Style="{StaticResource Style_Label1}"/>
-
-                <TextBox x:Name="SecondNam" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="FirstName" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="MiddleName" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="Position" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="FIOChef" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="Facility" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="FacilityAdress" Style="{StaticResource Style_TextBox1}"/>-->
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Табельный номер" Width="150" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="PersonnelNumber" Width="400" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Структурное подразделение" Width="220" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="StructuralDivision" Width="330" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Профессия (Должность)" Width="190" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="Position" Width="360" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Дата поступления на работу" Width="220" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="DateOfEmployment" Width="330" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <Label Content="Дата изменения профессии(должности) или перевода " Width="450" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                <StackPanel Orientation="Horizontal">                    
+                    <Label Content="в другое структурное подразделение" Width="300" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="DateOfChangeOfProfession" Width="250" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Руководитель" Width="130" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="FIOChief" Width="420" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Column="2">
-                <Label Content="Возраст: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Пол: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Рост: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Размер одежды: " Style="{StaticResource Style_Label1}"/>
-
-            </StackPanel>
-            <StackPanel Grid.Column="3">
-                <TextBox x:Name="Age" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="Gender" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="Height" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="ClothingSize" Style="{StaticResource Style_TextBox1}"/>
+            <StackPanel Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Пол" Width="50" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="Gender" Width="60" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Рост" Width="50" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="Height" Width="60" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <Label Content="Размер:" Width="100" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Одежды" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="ClothingSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Обуви" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="ShoeSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Головного убора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="HeaddressSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Противогаза" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="GasMaskSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Распиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="RaspiratorSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Рукавиц" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="MittensSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Перчаток" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="GlovesSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Background="#FFB6B6B6">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="125"/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="125"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="400*"/>
+                <ColumnDefinition Width="400*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Название" Background="#FFEBF3FF" />
-            <Button Grid.Column="1" Content="Номенкл-ый №" Background="#FFEBF3FF"/>
-            <Button Grid.Column="2" Content="Кол-во" Background="#FFEBF3FF"/>
-            <Button Grid.Column="3" Content="Дата выдачи" Background="#FFEBF3FF"/>
-            <Button Grid.Column="4" Background="#FFEBF3FF">
-                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Text="Срок службы"/>
-            </Button>
-            <Button Grid.Column="5" Background="#FFEBF3FF">
-                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Text="Дата конца срока службы"/>
-            </Button>                    
+            <Grid Grid.Column="0">
+                <TextBlock Text="Наименование СИЗ" Height="60" Style="{StaticResource Text_Block1}"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <TextBlock Text="№ сертификата" Height="60" Style="{StaticResource Text_Block1}"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Выдано" Width="398" Style="{StaticResource Text_Block1}"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Дата" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="1" Text="Количество" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="2" Text="% износа" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="3" Text="Расписка" Style="{StaticResource Text_Block1}"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Возвращено" Width="398" Style="{StaticResource Text_Block1}"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Дата" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="1" Text="Количество" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="2" Text="% износа" Style="{StaticResource Text_Block1}"/>
+                    <TextBlock Grid.Column="3" Text="Расписка" Style="{StaticResource Text_Block1}"/>
+                </Grid>                
+            </Grid>            
         </Grid>
         <ScrollViewer Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
             <StackPanel x:Name="StackPanel_Inventory" >
             </StackPanel>
         </ScrollViewer>
-        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left">
             <Button x:Name="BtnAddItem" 
                     Content="Добавить вещь" 
                     Width="100"
                     Click="BtnAddItem_Click" 
-                    Margin="10,10,255,10"/>            
+                    Margin="10,10,0,10"/>            
             <Button x:Name="BtnSavePerson" 
                     Content="Сохранить" 
                     Width="100"
                     Click="BtnSavePerson_Click" 
-                    Margin="10,10,0,10"/>
+                    Margin="665,10,0,10"/>
             <Button x:Name="BtnDeletePerson" 
                     Content="Удалить" 
                     Width="100"
                     Click="BtnDeletePerson_Click" 
                     Margin="10" 
-                    Background="#FFFFBEBE"/>
-            
+                    Background="#FFFFBEBE"/>            
         </StackPanel>
 
     </Grid>

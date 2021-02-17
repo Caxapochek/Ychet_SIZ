@@ -12,7 +12,7 @@ namespace Учет_СИЗ
         private string Personnel_Number;            //Табельный номер
         private string First_Name;                  //Имя
         private string Last_Name;                   //Фамилия
-        private string Middle_name;                 //Отчество 
+        private string Middle_Name;                 //Отчество 
         private string Structural_Division;         //Структурное подразделение+
         private string Position;                    //Должность
         private string Date_Of_Employment;          //Дата приема на работу+
@@ -82,17 +82,17 @@ namespace Учет_СИЗ
                 else Last_Name = value;
             }
         }
-        public string Change_Middle_name
+        public string Change_Middle_Name
         {
-            get { return Middle_name; }
+            get { return Middle_Name; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
                     //MessageBox.Show("\"Отчество\" указано неверно!" + "\n" + "Строка не должна быть пустой и не содержать пробелов. Установлено значение \"Н/Д\"");
-                    Middle_name = "Н/Д";
+                    Middle_Name = "Н/Д";
                 }
-                else Middle_name = value;
+                else Middle_Name = value;
             }
         }
         public string Change_Structural_Division
@@ -287,7 +287,7 @@ namespace Учет_СИЗ
             Personnel_Number = "Н/Д";            //Табельный номер
             First_Name = "Н/Д";                  //Имя
             Last_Name = "Н/Д";                   //Фамилия
-            Middle_name = "Н/Д";                 //Отчество 
+            Middle_Name = "Н/Д";                 //Отчество 
             Structural_Division = "Н/Д";         //Структурное подразделение+
             Position = "Н/Д";                    //Должность
             Date_Of_Employment = "Н/Д";          //Дата приема на работу+
@@ -304,7 +304,7 @@ namespace Учет_СИЗ
             FIO_Chief = "Н/Д";                   //Руководитель
     }
         
-        public Person(string Personal_Card_Number, string Personnel_Number, string First_Name, string Last_Name, string Middle_name,
+        public Person(string Personal_Card_Number, string Personnel_Number, string First_Name, string Last_Name, string Middle_Name,
             string Structural_Division, string Position, string Date_Of_Employment, string Date_Of_Change_Of_Profession, string Gender,
             string Height, string Clothing_Size, string Shoe_Size, string Headdress_Size, string Gas_Mask_Size, string Raspirator_Size,
             string Mittens_Size, string Gloves_Size, string FIO_Chief, List<Item> Items)
@@ -313,7 +313,7 @@ namespace Учет_СИЗ
             this.Personnel_Number = Personnel_Number;            //Табельный номер
             this.First_Name = First_Name;                  //Имя
             this.Last_Name = Last_Name;                   //Фамилия
-            this.Middle_name = Middle_name;                 //Отчество 
+            this.Middle_Name = Middle_Name;                 //Отчество 
             this.Structural_Division = Structural_Division;         //Структурное подразделение+
             this.Position = Position;                    //Должность
             this.Date_Of_Employment = Date_Of_Employment;          //Дата приема на работу+

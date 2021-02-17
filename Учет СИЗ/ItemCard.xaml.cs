@@ -45,10 +45,9 @@ namespace Учет_СИЗ
         #region Кнопки
         private void BtnSaveItem_Click(object sender, RoutedEventArgs e)
         {
-            Person1.Items.Remove(Item1);
-            Item1 = new Item(TBTitle.Text.ToString(), TBItem_number.Text.ToString(), TBQuantity.Text.ToString(), 
-                TBDate_Of_Commissioning.Text.ToString(), TBService_Life.Text.ToString(), 
-                TBDate_Of_Decommissioning.Text.ToString());
+        Person1.Items.Remove(Item1);
+            Item1 = new Item(Name.Text, CertificateOfConformity.Text, IssuedDate.Text, IssuedQuantity.Text, IssuedWear.Text, IssuedReceipt.Text,
+                ReturnedDate.Text, ReturnedQuantity.Text, ReturnedWear.Text, ReturnedReceipt.Text);
             Person1.Items.Add(Item1);
             this.Close();
         }
@@ -66,12 +65,16 @@ namespace Учет_СИЗ
         #region  Методы
         private void Fill()
         {
-            TBTitle.Text = Item1.Title_GetSet;
-            TBItem_number.Text = Item1.Item_number_GetSet;
-            TBQuantity.Text = Item1.Quantity_GetSet;
-            TBDate_Of_Commissioning.Text = Item1.Date_Of_Commissioning_GetSet;
-            TBService_Life.Text = Item1.Service_Life_GetSet;
-            TBDate_Of_Decommissioning.Text = Item1.Date_Of_Decommissioning_GetSet;
+            Name.Text = Item1.Name_GetSet;
+            CertificateOfConformity.Text = Item1.Certificate_Of_Conformity_GetSet;
+            IssuedDate.Text = Item1.Issued_Date_GetSet;
+            IssuedQuantity.Text = Item1.Issued_Quantity_GetSet;
+            IssuedWear.Text = Item1.Issued_Wear_GetSet;
+            IssuedReceipt.Text = Item1.Issued_Receipt_GetSet;
+            ReturnedDate.Text = Item1.Returned_Date_GetSet;
+            ReturnedQuantity.Text = Item1.Returned_Quantity_GetSet;
+            ReturnedWear.Text = Item1.Returned_Wear_GetSet;
+            ReturnedReceipt.Text = Item1.Returned_Receipt_GetSet;
         }
         #endregion
 

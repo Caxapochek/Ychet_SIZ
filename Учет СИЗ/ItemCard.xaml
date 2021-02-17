@@ -5,71 +5,122 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="ItemCard" Height="250" Width="300"
+        Title="ItemCard" Height="352" Width="420"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" ResizeMode="NoResize" 
         BorderBrush="Black" BorderThickness="2">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
-            <Setter Property="Height" Value="25"/>
-            <Setter Property="HorizontalContentAlignment" Value="Right"/>
-        </Style>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>        
         <Style TargetType="TextBox" x:Key="Style_TextBox1">
-            <Setter Property="Height" Value="21"/>
+            <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="16"/>
         </Style>
-    </Window.Resources>
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFA9CDFF" Offset="0"/>
-            <GradientStop Color="White" Offset="0.659"/>
-            <GradientStop Color="#FFA9CDFF" Offset="1"/>
-            <GradientStop Color="White" Offset="0.815"/>
-            <GradientStop Color="#FFC4DDFF" Offset="0.048"/>
-            <GradientStop Color="#FFC8DFFF" Offset="0.98"/>
-        </LinearGradientBrush>
-    </Window.Background>
-    <Grid>
+    </Window.Resources>    
+    <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="190*"/>
-                <ColumnDefinition Width="110*"/>
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0">
-                <Label Content="Название: " Style="{StaticResource Style_Label1}" />
-                <Label Content="Номенклатурный номер: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Количество: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Дата выдачи: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Срок службы: " Style="{StaticResource Style_Label1}"/>
-                <Label Content="Дата окончания срока службы: " Style="{StaticResource Style_Label1}"/>
+            <StackPanel Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Наименование СИЗ" Width="200" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="Name" Width="200" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
-            <StackPanel Grid.Column="1">
-                <TextBox x:Name="TBTitle" Style="{StaticResource Style_TextBox1}" AutomationProperties.HelpText="123" />
-                <TextBox x:Name="TBItem_number" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="TBQuantity" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="TBDate_Of_Commissioning" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="TBService_Life" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="TBDate_Of_Decommissioning" Style="{StaticResource Style_TextBox1}"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Сертификат соответствия" Width="200" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="CertificateOfConformity" Width="200" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="64*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Возвращено" Width="398" Style="{StaticResource Style_Label1}"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Дата" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedDate" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Количество" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedQuantity" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <Label Content="% износа" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedWear" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <Label Content="Расписка" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedReceipt" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="64*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Выдано" Width="398" Style="{StaticResource Style_Label1}"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Дата" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedDate" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Label Content="Количество" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedQuantity" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <Label Content="% износа" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedWear" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3">
+                    <Label Content="Расписка" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedReceipt" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="3">
             <Button x:Name="BtnSaveItem" 
                     Content="Сохранить" 
                     Width="80"
                     Height="20"
                     Click="BtnSaveItem_Click" 
-                    Margin="10,20,0,10"/>
+                    Margin="230,20,10,10" 
+                    HorizontalAlignment="Left"/>
             <Button x:Name="BtnDeleteItem" 
                     Content="Удалить" 
                     Width="80"
                     Height="20"
                     Click="BtnDeleteItem_Click" 
-                    Margin="200,20,10,10" 
-                    Background="#FFFFBEBE"/>
+                    Margin="320,20,10,10" 
+                    Background="#FFFFBEBE"
+                    HorizontalAlignment="Left"/>
         </Grid>
     </Grid>
 </Window>
