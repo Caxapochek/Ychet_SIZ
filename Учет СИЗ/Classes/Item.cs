@@ -4,88 +4,143 @@ namespace Учет_СИЗ.Classes
 {
     public class Item
     {
-        private string Title;
-        private string Item_number;
-        private string Quantity;
-        private string Date_Of_Commissioning;
-        private string Service_Life;
-        private string Date_Of_Decommissioning;
+        private string Name;                        //Наименование СИЗ
+        private string Certificate_Of_Conformity;   //Сертификат соответствия
+        private string Issued_Date;                 //Выдано-дата
+        private string Issued_Quantity;             //Выдано-количество
+        private string Issued_Wear;                 //Выдано-износ
+        private string Issued_Receipt;              //Выдано-расписка
+        private string Returned_Date;               //Выдано-дата
+        private string Returned_Quantity;           //Выдано-количество
+        private string Returned_Wear;               //Выдано-износ
+        private string Returned_Receipt;            //Выдано-расписка
 
         #region Свойства
-        public string Title_GetSet
+        public string Name_GetSet
         {
-            get { return Title; }
-            set
-            {
-                Regex regex = new Regex(@"^[А-Я]?[а-я]+$");
-                if (!regex.IsMatch(value))
-                {
-                    Title = "Н/Д";
-                }
-                else Title = value;
-            }
-        }
-        public string Item_number_GetSet
-        {
-            get { return Item_number; }
+            get { return Name; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    Item_number = "Н/Д";
+                    Name = "Н/Д";
                 }
-                else Item_number = value;
+                else Name = value;
             }
         }
-        public string Quantity_GetSet
+        public string Certificate_Of_Conformity_GetSet
         {
-            get { return Quantity; }
+            get { return Certificate_Of_Conformity; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    Quantity = "Н/Д";
+                    Certificate_Of_Conformity = "Н/Д";
                 }
-                else Quantity = value;
+                else Certificate_Of_Conformity = value;
             }
         }
-        public string Date_Of_Commissioning_GetSet
+        public string Issued_Date_GetSet
         {
-            get { return Date_Of_Commissioning; }
+            get { return Issued_Date; }
             set
             {
                 Regex regex = new Regex(@"^\d\d[.]\d\d[.]\d\d$");
                 if (!regex.IsMatch(value))
                 {
-                    Date_Of_Commissioning = "Н/Д";
+                    Issued_Date = "Н/Д";
                 }
-                else Date_Of_Commissioning = value;
+                else Issued_Date = value;
             }
         }
-        public string Service_Life_GetSet
+        public string Issued_Quantity_GetSet
         {
-            get { return Service_Life; }
+            get { return Issued_Quantity; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    Service_Life = "Н/Д";
+                    Issued_Quantity = "Н/Д";
                 }
-                else Service_Life = value;
+                else Issued_Quantity = value;
             }
         }
-        public string Date_Of_Decommissioning_GetSet
+        public string Issued_Wear_GetSet
+        {
+            get { return Issued_Wear; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Issued_Wear = "Н/Д";
+                }
+                else Issued_Wear = value;
+            }
+        }
+        public string Issued_Receipt_GetSet
         {
 
-            get { return Date_Of_Decommissioning; }
+            get { return Issued_Receipt; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Issued_Receipt = "Н/Д";
+                }
+                else Issued_Receipt = value;
+            }
+        }
+        public string Returned_Date_GetSet
+        {
+
+            get { return Returned_Date; }
             set
             {
                 Regex regex = new Regex(@"^\d\d[.]\d\d[.]\d\d$");
                 if (!regex.IsMatch(value))
                 {
-                    Date_Of_Decommissioning = "Н/Д";
+                    Returned_Date = "Н/Д";
                 }
-                else Date_Of_Decommissioning = value;
+                else Returned_Date = value;
+            }
+        }
+        public string Returned_Quantity_GetSet
+        {
+
+            get { return Returned_Quantity; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Returned_Quantity = "Н/Д";
+                }
+                else Returned_Quantity = value;
+            }
+        }
+        public string Returned_Wear_GetSet
+        {
+
+            get { return Returned_Wear; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Returned_Wear = "Н/Д";
+                }
+                else Returned_Wear = value;
+            }
+        }
+        public string Returned_Receipt_GetSet
+        {
+
+            get { return Returned_Receipt; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Returned_Receipt = "Н/Д";
+                }
+                else Returned_Receipt = value;
             }
         }
         #endregion
@@ -93,21 +148,30 @@ namespace Учет_СИЗ.Classes
         #region Конструкторы
         public Item()
         {
-            Title = "Н/Д";
-            Item_number = "Н/Д";
-            Quantity = "Н/Д";
-            Date_Of_Commissioning = "Н/Д";
-            Service_Life = "Н/Д";
-            Date_Of_Decommissioning = "Н/Д";
-        }
-        public Item(string title,string item_number,string quantity,string date_Of_Commissioning,string service_Life,string date_Of_Decommissioning)
+            Name = "Н/Д";                        //Наименование СИЗ
+            Certificate_Of_Conformity = "Н/Д";   //Сертификат соответствия
+            Issued_Date = "Н/Д";                 //Выдано-дата
+            Issued_Quantity = "Н/Д";             //Выдано-количество
+            Issued_Wear = "Н/Д";                 //Выдано-износ
+            Issued_Receipt = "Н/Д";              //Выдано-расписка
+            Returned_Date = "Н/Д";               //Выдано-дата
+            Returned_Quantity = "Н/Д";           //Выдано-количество
+            Returned_Wear = "Н/Д";               //Выдано-износ
+            Returned_Receipt = "Н/Д";            //Выдано-расписка
+    }
+        public Item(string Name, string Certificate_Of_Conformity, string Issued_Date, string Issued_Quantity, string Issued_Wear,
+            string Issued_Receipt, string Returned_Date, string Returned_Quantity, string Returned_Wear, string Returned_Receipt)
         {
-            Title_GetSet = title;
-            Item_number_GetSet = item_number;
-            Quantity_GetSet = quantity;
-            Date_Of_Commissioning_GetSet = date_Of_Commissioning;
-            Service_Life_GetSet = service_Life;
-            Date_Of_Decommissioning_GetSet = date_Of_Decommissioning;
+            this.Name = Name;                                           //Наименование СИЗ
+            this.Certificate_Of_Conformity = Certificate_Of_Conformity; //Сертификат соответствия
+            this.Issued_Date = Issued_Date;                             //Выдано-дата
+            this.Issued_Quantity = Issued_Quantity;                     //Выдано-количество
+            this.Issued_Wear = Issued_Wear;                             //Выдано-износ
+            this.Issued_Receipt = Issued_Receipt;                       //Выдано-расписка
+            this.Returned_Date = Returned_Date;                         //Выдано-дата
+            this.Returned_Quantity = Returned_Quantity;                 //Выдано-количество
+            this.Returned_Wear = Returned_Wear;                         //Выдано-износ
+            this.Returned_Receipt = Returned_Receipt;                   //Выдано-расписка
         }
         #endregion
 

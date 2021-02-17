@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" MinWidth="500" MinHeight="300" 
+        Title="MainWindow" Height="500" Width="1000" MinWidth="500" MinHeight="300" 
         ResizeMode="NoResize" WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="White" Offset="0.301"/>
-            <GradientStop Color="#FFA9CDFF"/>
-            <GradientStop Color="White" Offset="0.92"/>
-            <GradientStop Color="#FFA9CDFF" Offset="1"/>
-        </LinearGradientBrush>
-    </Window.Background>
-    <Grid>
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="Style_Button1">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="#FFEBF3FF"/>
+        </Style>
+        <Style TargetType="TextBox" x:Key="Style_TextBox1">
+            <Setter Property="Height" Value="31"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+    </Window.Resources>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="70"/>
@@ -26,10 +31,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button x:Name="BtnAddPerson" Content="Добавить" Margin="5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnAddPerson_Click">
+            <Button x:Name="BtnAddPerson" Style="{StaticResource Style_Button1}" Click="BtnAddPerson_Click" Content="Добавить человека" Margin="5" Width="160" >
 
             </Button>
-            <Button x:Name="BtnExit" Content = "Закрыть" Margin="670,5,5,5" MaxHeight="30" MinHeight="30" Height="30" Click="BtnExit_Click" Background="#FFFFBEBE">
+            <Button x:Name="BtnExit" Style="{StaticResource Style_Button1}" Content = "Закрыть" Margin="740,5,5,5" Width="80" Click="BtnExit_Click" Background="#FFFFBEBE">
 
             </Button>
         </StackPanel>
@@ -37,14 +42,16 @@
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="350"/>
                 <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Табельный №" Background="#FFEBF3FF"/>
-            <Button Grid.Column="1" Content="ФИО" Background="#FFEBF3FF"/>
-            <Button Grid.Column="2" Content="Должность" Background="#FFEBF3FF"/>
-            <Button Grid.Column="3" Content="Объект" Background="#FFEBF3FF"/>
+            <Button Grid.Column="0" Content="№ карточки" Style="{StaticResource Style_Button1}"/>
+            <Button Grid.Column="1" Content="Таб. номер" Style="{StaticResource Style_Button1}"/>
+            <Button Grid.Column="2" Content="ФИО"  Style="{StaticResource Style_Button1}"/>
+            <Button Grid.Column="3" Content="Должность"  Style="{StaticResource Style_Button1}"/>
+            <Button Grid.Column="4" Content="Руководитель" Style="{StaticResource Style_Button1}"/>
         </Grid>
 
         <Grid Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">

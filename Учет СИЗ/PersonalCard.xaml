@@ -6,44 +6,53 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="600" Width="600" 
+        Title="Personal Card" Height="650" Width="1000" 
         ResizeMode="NoResize" WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
-            <Setter Property="Height" Value="25"/>
+            <Setter Property="Height" Value="35"/>
             <Setter Property="HorizontalContentAlignment" Value="Right"/>
+            <Setter Property="FontSize" Value="16"/>
         </Style>
         <Style TargetType="TextBox" x:Key="Style_TextBox1">
-            <Setter Property="Height" Value="21"/>
+            <Setter Property="Height" Value="31"/>
             <Setter Property="Width" Value="100"/>
             <Setter Property="Margin" Value="2"/>
         </Style>
     </Window.Resources>
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFA9CDFF"/>
-            <GradientStop Color="White" Offset="0.558"/>
-            <GradientStop Color="#FFA9CDFF" Offset="1"/>
-            <GradientStop Color="White" Offset="0.896"/>
-        </LinearGradientBrush>
-    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="260"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Личная карточка №" Style="{StaticResource Style_Label1}" />
+                <TextBox x:Name="PersonalNumber" Style="{StaticResource Style_TextBox1}" />
+                <Label Content="учета выдачи СИЗ" Style="{StaticResource Style_Label1}" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150*"/>
-                <ColumnDefinition Width="150*"/>
-                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="150*" />
                 <ColumnDefinition Width="150*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
-                <Label Content="Номер карточки" Style="{StaticResource Style_Label1}" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Фамилия" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="SecondName" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Имя" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="FirstName" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Отчество" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="MiddleName" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
+                <!--<Label Content="Номер карточки" Style="{StaticResource Style_Label1}" />
                 <Label Content="Фамилия: " Style="{StaticResource Style_Label1}"/>
                 <Label Content="Имя: " Style="{StaticResource Style_Label1}"/>
                 <Label Content="Отчество: " Style="{StaticResource Style_Label1}"/>
@@ -51,16 +60,14 @@
                 <Label Content="Руководитель: " Style="{StaticResource Style_Label1}"/>
                 <Label Content="Объект: " Style="{StaticResource Style_Label1}"/>
                 <Label  Content="Адресс объекта: " Style="{StaticResource Style_Label1}"/>
-            </StackPanel>
-            <StackPanel Grid.Column="1">
-                <TextBox x:Name="PersonalNumber" Style="{StaticResource Style_TextBox1}" Margin="2,5,2,2"/>
-                <TextBox x:Name="SecondName" Style="{StaticResource Style_TextBox1}"/>
+
+                <TextBox x:Name="SecondNam" Style="{StaticResource Style_TextBox1}"/>
                 <TextBox x:Name="FirstName" Style="{StaticResource Style_TextBox1}"/>
                 <TextBox x:Name="MiddleName" Style="{StaticResource Style_TextBox1}"/>
                 <TextBox x:Name="Position" Style="{StaticResource Style_TextBox1}"/>
                 <TextBox x:Name="FIOChef" Style="{StaticResource Style_TextBox1}"/>
                 <TextBox x:Name="Facility" Style="{StaticResource Style_TextBox1}"/>
-                <TextBox x:Name="FacilityAdress" Style="{StaticResource Style_TextBox1}"/>
+                <TextBox x:Name="FacilityAdress" Style="{StaticResource Style_TextBox1}"/>-->
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <Label Content="Возраст: " Style="{StaticResource Style_Label1}"/>
@@ -76,7 +83,7 @@
                 <TextBox x:Name="ClothingSize" Style="{StaticResource Style_TextBox1}"/>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="100"/>
@@ -96,11 +103,11 @@
                 <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Text="Дата конца срока службы"/>
             </Button>                    
         </Grid>
-        <ScrollViewer Grid.Row="2" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
+        <ScrollViewer Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
             <StackPanel x:Name="StackPanel_Inventory" >
             </StackPanel>
         </ScrollViewer>
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="BtnAddItem" 
                     Content="Добавить вещь" 
                     Width="100"
