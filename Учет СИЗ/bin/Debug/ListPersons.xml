@@ -25,8 +25,20 @@
   <Person>
     <Items>
       <Item>
-        <Name_GetSet>Шапка</Name_GetSet>
-        <Certificate_Of_Conformity_GetSet>123</Certificate_Of_Conformity_GetSet>
+        <Name_GetSet>Перчатки с полимерным покрытием</Name_GetSet>
+        <Certificate_Of_Conformity_GetSet>20010-93</Certificate_Of_Conformity_GetSet>
+        <Issued_Date_GetSet>Н/Д</Issued_Date_GetSet>
+        <Issued_Quantity_GetSet>6</Issued_Quantity_GetSet>
+        <Issued_Wear_GetSet>0</Issued_Wear_GetSet>
+        <Issued_Receipt_GetSet>Требование -накладная №РЛ00-000009 от 12.03.2018</Issued_Receipt_GetSet>
+        <Returned_Date_GetSet>Н/Д</Returned_Date_GetSet>
+        <Returned_Quantity_GetSet>6</Returned_Quantity_GetSet>
+        <Returned_Wear_GetSet>100</Returned_Wear_GetSet>
+        <Returned_Receipt_GetSet>Акт о списании мягкого и хоз. инвенторя от 15.01.2015 </Returned_Receipt_GetSet>
+      </Item>
+      <Item>
+        <Name_GetSet>Костюм рабочий</Name_GetSet>
+        <Certificate_Of_Conformity_GetSet>27575-87</Certificate_Of_Conformity_GetSet>
         <Issued_Date_GetSet>02.10.17</Issued_Date_GetSet>
         <Issued_Quantity_GetSet>1</Issued_Quantity_GetSet>
         <Issued_Wear_GetSet>0</Issued_Wear_GetSet>
