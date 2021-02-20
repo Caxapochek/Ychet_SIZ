@@ -21,7 +21,7 @@
             <Setter Property="Margin" Value="2"/>
         </Style>
     </Window.Resources>
-        <Grid>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="70"/>
@@ -47,15 +47,19 @@
                 <ColumnDefinition Width="250"/>
                 <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="№ карточки" Style="{StaticResource Style_Button1}"/>
-            <Button Grid.Column="1" Content="Таб. номер" Style="{StaticResource Style_Button1}"/>
-            <Button Grid.Column="2" Content="ФИО"  Style="{StaticResource Style_Button1}"/>
-            <Button Grid.Column="3" Content="Должность"  Style="{StaticResource Style_Button1}"/>
-            <Button Grid.Column="4" Content="Руководитель" Style="{StaticResource Style_Button1}"/>
+            <Button Grid.Column="0" Content="№ карточки" Style="{StaticResource Style_Button1}" Click="Button_Click"/>
+            <Button Grid.Column="1" Content="Таб. номер" Style="{StaticResource Style_Button1}" Click="Button_Click_1"/>
+            <Button Grid.Column="2" Content="ФИО"  Style="{StaticResource Style_Button1}" Click="Button_Click_2"/>
+            <Button Grid.Column="3" Content="Должность"  Style="{StaticResource Style_Button1}" Click="Button_Click_3"/>
+            <Button Grid.Column="4" Content="Руководитель" Style="{StaticResource Style_Button1}" Click="Button_Click_4"/>
         </Grid>
 
         <Grid Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
-            <ScrollViewer>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="34*"/>
+                <ColumnDefinition Width="215*"/>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.ColumnSpan="2">
                 <StackPanel x:Name="StackPanel_Persona" ScrollViewer.CanContentScroll="True" CanVerticallyScroll="True" CanHorizontallyScroll="True"/>
             </ScrollViewer>
         </Grid>

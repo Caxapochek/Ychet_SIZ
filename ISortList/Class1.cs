@@ -11,5 +11,9 @@ namespace ISortList
         void SortByFIO();
         void SortByPosition();
         void SortByFIO_Chief();
+
+        void SortBySortByPersonal_Number();
+
+        void SortBYPersonal_Card_Number();
     }
 }

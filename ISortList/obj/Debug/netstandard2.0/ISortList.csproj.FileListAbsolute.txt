@@ -1,0 +1,9 @@
+D:\Проект\-\ISortList\bin\Debug\netstandard2.0\ISortList.deps.json
+D:\Проект\-\ISortList\bin\Debug\netstandard2.0\ISortList.dll
+D:\Проект\-\ISortList\bin\Debug\netstandard2.0\ISortList.pdb
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.csprojAssemblyReference.cache
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.AssemblyInfoInputs.cache
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.AssemblyInfo.cs
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.csproj.CoreCompileInputs.cache
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.dll
+D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.pdb

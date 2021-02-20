@@ -44,6 +44,26 @@ namespace Учет_СИЗ
             return string.Compare(a.Change_Last_Name, b.Change_Last_Name);
         }
     }
+
+    public class SortPersonal_Card_Number : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_Personal_Card_Number, b.Change_Personal_Card_Number);
+        }
+    }
+
+    public class SortPersonal_Number : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_Personnel_Number, b.Change_Personnel_Number);
+        }
+    }
     #endregion
 
     public partial class MainWindow : Window
@@ -84,6 +104,71 @@ namespace Учет_СИЗ
         {
             SerializingPersons(list_of_persons);
             Application.Current.Shutdown();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.SortBYPersonal_Card_Number();
+            StackPanel_Persona.Children.Clear();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.SortByPersonal_Number();
+            StackPanel_Persona.Children.Clear();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.SortByFIO();
+            StackPanel_Persona.Children.Clear();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.SortByPosition();
+            StackPanel_Persona.Children.Clear();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            this.SortByFIO_Chief();
+            StackPanel_Persona.Children.Clear();
+            foreach (Person per in list_of_persons)
+            {
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                BtnPerson.AddWindow.BtnSavePerson.Click += Update;
+                BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                StackPanel_Persona.Children.Add(BtnPerson);
+            }
         }
         #endregion
 
@@ -164,7 +249,7 @@ namespace Учет_СИЗ
             int N = list_of_persons.Count;
             Person[] SL = new Person[N];
             SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortPosition()) ;
+            Array.Sort(SL, new SortPosition());
             list_of_persons = new List<Person>(SL);
         }
 
@@ -185,6 +270,30 @@ namespace Учет_СИЗ
             Array.Sort(SL, new SortFIO());
             list_of_persons = new List<Person>(SL);
         }
+
+        public void SortByPersonal_Number()
+        {
+            int N = list_of_persons.Count;
+            Person[] SL = new Person[N];
+            SL = list_of_persons.ToArray();
+            Array.Sort(SL, new SortPersonal_Number());
+            list_of_persons = new List<Person>(SL);
+        }
+
+        public void SortBYPersonal_Card_Number()
+        {
+            int N = list_of_persons.Count;
+            Person[] SL = new Person[N];
+            SL = list_of_persons.ToArray();
+            Array.Sort(SL, new SortPersonal_Card_Number());
+            list_of_persons = new List<Person>(SL);
+        }
+
+
+
+
         #endregion
+
+        
     }
 }
