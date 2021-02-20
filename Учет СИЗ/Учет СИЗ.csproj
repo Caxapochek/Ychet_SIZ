@@ -112,5 +112,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISortList\ISortList.csproj">
+      <Project>{cfeab3f1-6ffc-4530-9a62-89a7ddfac806}</Project>
+      <Name>ISortList</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

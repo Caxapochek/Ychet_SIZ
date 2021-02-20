@@ -69,4 +69,39 @@
     <Change_Gloves_Size>8</Change_Gloves_Size>
     <Change_FIO_Chief>Саханда А.В.</Change_FIO_Chief>
   </Person>
+  <Person>
+    <Items>
+      <Item>
+        <Name_GetSet>Рукавицы</Name_GetSet>
+        <Certificate_Of_Conformity_GetSet>27575-87</Certificate_Of_Conformity_GetSet>
+        <Issued_Date_GetSet>Н/Д</Issued_Date_GetSet>
+        <Issued_Quantity_GetSet>Н/Д</Issued_Quantity_GetSet>
+        <Issued_Wear_GetSet>Н/Д</Issued_Wear_GetSet>
+        <Issued_Receipt_GetSet>Н/Д</Issued_Receipt_GetSet>
+        <Returned_Date_GetSet>Н/Д</Returned_Date_GetSet>
+        <Returned_Quantity_GetSet>Н/Д</Returned_Quantity_GetSet>
+        <Returned_Wear_GetSet>Н/Д</Returned_Wear_GetSet>
+        <Returned_Receipt_GetSet>Н/Д</Returned_Receipt_GetSet>
+      </Item>
+    </Items>
+    <Change_Personal_Card_Number>3</Change_Personal_Card_Number>
+    <Change_Personnel_Number>000003</Change_Personnel_Number>
+    <Change_First_Name>Илья</Change_First_Name>
+    <Change_Last_Name>Славинский </Change_Last_Name>
+    <Change_Middle_Name>Валерьевич</Change_Middle_Name>
+    <Change_Structural_Division>ЯрГУ</Change_Structural_Division>
+    <Change_Position>Студент 3 курс</Change_Position>
+    <Change_Date_Of_Employment>01.09.2018</Change_Date_Of_Employment>
+    <Change_Date_Of_Change_Of_Profession>Н/Д</Change_Date_Of_Change_Of_Profession>
+    <Change_Gender>М</Change_Gender>
+    <Change_Height>185</Change_Height>
+    <Change_Clothing_size>52</Change_Clothing_size>
+    <Change_Shoe_Size>43</Change_Shoe_Size>
+    <Change_Headdress_Size>54</Change_Headdress_Size>
+    <Change_Gas_Mask_Size>3</Change_Gas_Mask_Size>
+    <Change_Raspirator_Size>3</Change_Raspirator_Size>
+    <Change_Mittens_Size>3</Change_Mittens_Size>
+    <Change_Gloves_Size>10</Change_Gloves_Size>
+    <Change_FIO_Chief>Дурнев В.Г.</Change_FIO_Chief>
+  </Person>
 </ArrayOfPerson>

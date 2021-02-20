@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Учет СИЗ", "Учет СИЗ\Учет СИЗ.csproj", "{432ECA32-180D-4E67-9072-E706928E17B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISortList", "ISortList\ISortList.csproj", "{CFEAB3F1-6FFC-4530-9A62-89A7DDFAC806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{432ECA32-180D-4E67-9072-E706928E17B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{432ECA32-180D-4E67-9072-E706928E17B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{432ECA32-180D-4E67-9072-E706928E17B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFEAB3F1-6FFC-4530-9A62-89A7DDFAC806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFEAB3F1-6FFC-4530-9A62-89A7DDFAC806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFEAB3F1-6FFC-4530-9A62-89A7DDFAC806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFEAB3F1-6FFC-4530-9A62-89A7DDFAC806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

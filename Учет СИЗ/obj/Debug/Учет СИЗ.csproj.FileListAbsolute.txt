@@ -64,3 +64,23 @@ C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.c
 C:\Users\Chemiker\Documents\GitHub\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
 W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\ItemCard.g.cs
 W:\Ilya\Курс 3\Методы програмирования\Учет СИЗ\Учет СИЗ\obj\Debug\ItemCard.baml
+D:\Проект\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe.config
+D:\Проект\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe
+D:\Проект\-\Учет СИЗ\bin\Debug\Учет СИЗ.pdb
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csprojAssemblyReference.cache
+D:\Проект\-\Учет СИЗ\obj\Debug\ItemCard.g.cs
+D:\Проект\-\Учет СИЗ\obj\Debug\MainWindow.g.cs
+D:\Проект\-\Учет СИЗ\obj\Debug\PersonalCard.g.cs
+D:\Проект\-\Учет СИЗ\obj\Debug\App.g.cs
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.cache
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.lref
+D:\Проект\-\Учет СИЗ\obj\Debug\App.baml
+D:\Проект\-\Учет СИЗ\obj\Debug\ItemCard.baml
+D:\Проект\-\Учет СИЗ\obj\Debug\MainWindow.baml
+D:\Проект\-\Учет СИЗ\obj\Debug\PersonalCard.baml
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.g.resources
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет_СИЗ.Properties.Resources.resources
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResource.cache
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.exe
+D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.pdb

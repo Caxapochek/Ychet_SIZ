@@ -9,12 +9,48 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Security.Permissions;
 using System.Windows.Media;
+using ISortList;
+using System.Collections;
 
 namespace Учет_СИЗ
 {
+    #region компораторы для сортировки
+    public class SortPosition : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_Position, b.Change_Position);
+        }
+    }
+
+    public class SortFIO_Chief : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_FIO_Chief, b.Change_FIO_Chief);
+        }
+    }
+
+    public class SortFIO : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_Last_Name, b.Change_Last_Name);
+        }
+    }
+    #endregion
+
     public partial class MainWindow : Window
     {
-        List<Person> list_of_persons = new List<Person>();        
+        List<Person> list_of_persons = new List<Person>();
+
+       
 
         #region конструктор
         public MainWindow()
@@ -53,7 +89,7 @@ namespace Учет_СИЗ
 
         #region Методы
         public void DeserializingPersons()
-        {            
+        {
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Person>));
             using (Stream fStream = File.OpenRead(@"ListPersons.xml"))
             {
@@ -67,7 +103,7 @@ namespace Учет_СИЗ
                     {
                         MessageBox.Show("Не удалось получить доступ к списку Person.");
                     });
-                } 
+                }
             }
         }
         public void SerializingPersons(List<Person> List)
@@ -80,7 +116,7 @@ namespace Учет_СИЗ
                 xmlFormat.Serialize(fStream, List);
             }
         }
-        private Grid MakeGrid(Person person)
+        private Grid MakeGrid(Person person) //добовление кнопок на экран в ScrollViewer
         {
             Grid grid = new Grid{Height = 30,Width = 1000};
             grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100)});
@@ -122,6 +158,33 @@ namespace Учет_СИЗ
         }
         #endregion
 
+        #region сортировка 
+        public void SortByPosition()
+        {
+            int N = list_of_persons.Count;
+            Person[] SL = new Person[N];
+            SL = list_of_persons.ToArray();
+            Array.Sort(SL, new SortPosition()) ;
+            list_of_persons = new List<Person>(SL);
+        }
 
+        public void SortByFIO_Chief()
+        {
+            int N = list_of_persons.Count;
+            Person[] SL = new Person[N];
+            SL = list_of_persons.ToArray();
+            Array.Sort(SL, new SortFIO_Chief());
+            list_of_persons = new List<Person>(SL);
+        }
+
+        public void SortByFIO()
+        {
+            int N = list_of_persons.Count;
+            Person[] SL = new Person[N];
+            SL = list_of_persons.ToArray();
+            Array.Sort(SL, new SortFIO());
+            list_of_persons = new List<Person>(SL);
+        }
+        #endregion
     }
 }

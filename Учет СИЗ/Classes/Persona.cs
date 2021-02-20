@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Учет_СИЗ.Classes;
@@ -6,7 +7,7 @@ using Учет_СИЗ.Classes;
 namespace Учет_СИЗ
 {
     [Serializable]
-    public class Person
+    public class Person : IComparable
     {
         private string Personal_Card_Number;        //Номер личной карточки+
         private string Personnel_Number;            //Табельный номер
@@ -331,5 +332,26 @@ namespace Учет_СИЗ
             this.Items = Items;
         }
         #endregion
+        public int CompareTo(Person other)
+        {
+            return Personnel_Number.CompareTo(other.Personnel_Number);
+        }
+
+        public int CompareTo(object obj)
+        {
+            return Personal_Card_Number.CompareTo(obj);
+        }   
+        //public string CompareTo(object obj)
+        //{
+        //    return FIO_Chief.CompareTo(obj);
+        //}
+        //public string CompareTo(object obj)
+        //{
+        //    return First_Name.CompareTo(obj);
+        //}
+        //public string CompareTo(object obj)
+        //{
+        //    return Position.CompareTo(obj);
+        //}
     }
 }
