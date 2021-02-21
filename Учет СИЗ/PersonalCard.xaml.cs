@@ -44,7 +44,8 @@ namespace Учет_СИЗ
             List_of_persons = list_of_persons;
             Mode = mode;
             Person1 = new Person();
-            BtnDeletePerson.IsEnabled = false;
+            BtnDeletePerson.IsEnabled = true;
+            BtnDeletePerson.Content = "Отмена";
             BtnSavePerson.IsEnabled = true;  
             BtnSavePerson.Content = "Добавить";
             this.Show();

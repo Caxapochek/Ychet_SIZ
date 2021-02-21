@@ -41,7 +41,17 @@ namespace Учет_СИЗ
         {
             Person a = x as Person;
             Person b = y as Person;
-            return string.Compare(a.Change_Last_Name, b.Change_Last_Name);
+            return string.Compare(a.Change_Last_Name + ' ' + a.Change_First_Name + ' ' + a.Change_Middle_Name, b.Change_Last_Name + ' ' + b.Change_First_Name + ' ' + b.Change_Middle_Name);
+        }
+    }
+
+    public class SortName : System.Collections.IComparer
+    {
+        int IComparer.Compare(object x, object y)
+        {
+            Person a = x as Person;
+            Person b = y as Person;
+            return string.Compare(a.Change_First_Name, b.Change_First_Name);
         }
     }
 
@@ -267,6 +277,7 @@ namespace Учет_СИЗ
             int N = list_of_persons.Count;
             Person[] SL = new Person[N];
             SL = list_of_persons.ToArray();
+            list_of_persons.Clear();
             Array.Sort(SL, new SortFIO());
             list_of_persons = new List<Person>(SL);
         }

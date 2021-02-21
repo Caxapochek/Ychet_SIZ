@@ -7,3 +7,12 @@ D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.AssemblyInfo.cs
 D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.csproj.CoreCompileInputs.cache
 D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.dll
 D:\Проект\-\ISortList\obj\Debug\netstandard2.0\ISortList.pdb
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\bin\Debug\netstandard2.0\ISortList.deps.json
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\bin\Debug\netstandard2.0\ISortList.dll
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\bin\Debug\netstandard2.0\ISortList.pdb
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.csprojAssemblyReference.cache
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.csproj.CoreCompileInputs.cache
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.AssemblyInfoInputs.cache
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.AssemblyInfo.cs
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.dll
+C:\Users\Chemiker\Documents\GitHub\-\ISortList\obj\Debug\netstandard2.0\ISortList.pdb
