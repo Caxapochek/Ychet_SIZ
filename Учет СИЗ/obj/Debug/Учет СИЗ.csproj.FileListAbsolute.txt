@@ -84,3 +84,23 @@ D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResou
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.exe
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.pdb
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.csprojAssemblyReference.cache
+C:\-\Учет СИЗ\obj\Debug\ItemCard.g.cs
+C:\-\Учет СИЗ\obj\Debug\MainWindow.g.cs
+C:\-\Учет СИЗ\obj\Debug\PersonalCard.g.cs
+C:\-\Учет СИЗ\obj\Debug\App.g.cs
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.cache
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.lref
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.exe
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.pdb
+C:\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe.config
+C:\-\Учет СИЗ\bin\Debug\Учет СИЗ.exe
+C:\-\Учет СИЗ\bin\Debug\Учет СИЗ.pdb
+C:\-\Учет СИЗ\obj\Debug\App.baml
+C:\-\Учет СИЗ\obj\Debug\ItemCard.baml
+C:\-\Учет СИЗ\obj\Debug\MainWindow.baml
+C:\-\Учет СИЗ\obj\Debug\PersonalCard.baml
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.g.resources
+C:\-\Учет СИЗ\obj\Debug\Учет_СИЗ.Properties.Resources.resources
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResource.cache
+C:\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache

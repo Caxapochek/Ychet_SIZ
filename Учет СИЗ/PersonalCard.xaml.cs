@@ -15,6 +15,7 @@ namespace Учет_СИЗ
     {
         private List<Person> List_of_persons = new List<Person>();
         private Person Person1;
+        private Sizes Sizes1;
         private string Mode;//При значении "Add" отображать окно для добавления, а при "Show" показывать персональную карту
 
         #region Конструкторы
@@ -56,10 +57,10 @@ namespace Учет_СИЗ
         public void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
             List_of_persons.Remove(Person1);
+            Sizes1 = new Sizes(Height.Text, ClothingSize.Text, ShoeSize.Text, HeaddressSize.Text, GasMaskSize.Text, RaspiratorSize.Text,
+            MittensSize.Text, GlovesSize.Text);
             Person1 = new Person(PersonalCardNumber.Text, PersonnelNumber.Text, FirstName.Text, SecondName.Text,  MiddleName.Text,
-            StructuralDivision.Text, Position.Text, DateOfEmployment.Text, DateOfChangeOfProfession.Text, Gender.Text,
-            Height.Text, ClothingSize.Text, ShoeSize.Text,  HeaddressSize.Text, GasMaskSize.Text, RaspiratorSize.Text,
-            MittensSize.Text, GlovesSize.Text, FIOChief.Text, Person1.Items);
+            StructuralDivision.Text, Position.Text, DateOfEmployment.Text, DateOfChangeOfProfession.Text, Gender.Text, FIOChief.Text, Sizes1, Person1.Items);
             List_of_persons.Add(Person1);
             SerializingPersons(List_of_persons);
             this.Close();
@@ -101,14 +102,14 @@ namespace Учет_СИЗ
             DateOfEmployment.Text = Person1.Change_Date_Of_Employment;
             DateOfChangeOfProfession.Text = Person1.Change_Date_Of_Change_Of_Profession;
             Gender.Text = Person1.Change_Gender;
-            Height.Text = Person1.Change_Height;
-            ClothingSize.Text = Person1.Change_Clothing_size;
-            ShoeSize.Text = Person1.Change_Shoe_Size;
-            HeaddressSize.Text = Person1.Change_Headdress_Size;
-            GasMaskSize.Text = Person1.Change_Gas_Mask_Size;
-            RaspiratorSize.Text = Person1.Change_Raspirator_Size;
-            MittensSize.Text = Person1.Change_Mittens_Size;
-            GlovesSize.Text = Person1.Change_Gloves_Size;
+            Height.Text = Person1.Sizess.Change_Height; // возможно надо удалить файл в котором храним всю информацию и занова все записать
+            ClothingSize.Text = Person1.Sizess.Change_Clothing_size;
+            ShoeSize.Text = Person1.Sizess.Change_Shoe_Size;
+            HeaddressSize.Text = Person1.Sizess.Change_Headdress_Size;
+            GasMaskSize.Text = Person1.Sizess.Change_Gas_Mask_Size;
+            RaspiratorSize.Text = Person1.Sizess.Change_Raspirator_Size;
+            MittensSize.Text = Person1.Sizess.Change_Mittens_Size;
+            GlovesSize.Text = Person1.Sizess.Change_Gloves_Size;
             FIOChief.Text = Person1.Change_FIO_Chief;
             foreach (Item it in Person1.Items)
             {

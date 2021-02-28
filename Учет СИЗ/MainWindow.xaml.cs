@@ -69,8 +69,6 @@ namespace Учет_СИЗ
     {
         List<Person> list_of_persons = new List<Person>();
 
-       
-
         #region конструктор
         public MainWindow()
         {
@@ -293,7 +291,5 @@ namespace Учет_СИЗ
             list_of_persons.Sort(new SortPersonal_Card_Number());
         }
         #endregion
-
-        
     }
 }

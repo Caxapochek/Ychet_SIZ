@@ -70,6 +70,7 @@
     <Compile Include="Classes\Item.cs" />
     <Compile Include="Classes\MyButton_Item.cs" />
     <Compile Include="Classes\MyButton_Person.cs" />
+    <Compile Include="Classes\Sizes.cs" />
     <Compile Include="ItemCard.xaml.cs">
       <DependentUpon>ItemCard.xaml</DependentUpon>
     </Compile>
