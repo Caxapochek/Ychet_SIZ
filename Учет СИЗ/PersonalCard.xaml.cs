@@ -102,10 +102,10 @@ namespace Учет_СИЗ
             DateOfEmployment.Text = Person1.Change_Date_Of_Employment;
             DateOfChangeOfProfession.Text = Person1.Change_Date_Of_Change_Of_Profession;
             Gender.Text = Person1.Change_Gender;
-            Height.Text = Person1.Sizess.Change_Height; // возможно надо удалить файл в котором храним всю информацию и занова все записать
+            Height.Text = Person1.Sizess.Change_Height;
             ClothingSize.Text = Person1.Sizess.Change_Clothing_size;
             ShoeSize.Text = Person1.Sizess.Change_Shoe_Size;
-            HeaddressSize.Text = Person1.Sizess.Change_Headdress_Size;
+            HeaddressSize.Text = Person1.Sizess.Change_Headdress_Size; 
             GasMaskSize.Text = Person1.Sizess.Change_Gas_Mask_Size;
             RaspiratorSize.Text = Person1.Sizess.Change_Raspirator_Size;
             MittensSize.Text = Person1.Sizess.Change_Mittens_Size;
