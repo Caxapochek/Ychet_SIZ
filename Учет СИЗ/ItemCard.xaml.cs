@@ -16,7 +16,8 @@ namespace Учет_СИЗ
             Person1 = person;
             Mode = mode;
             InitializeComponent();
-            BtnDeleteItem.IsEnabled = false;
+            BtnDeleteItem.IsEnabled = true;
+            BtnDeleteItem.Content = "Отмена";
             BtnSaveItem.IsEnabled = true;
             BtnSaveItem.Content = "Добавить";
         }

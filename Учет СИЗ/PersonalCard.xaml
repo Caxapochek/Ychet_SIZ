@@ -6,7 +6,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="800" Width="1000" 
+        Title="Personal Card" Height="602" Width="1000" 
         ResizeMode="NoResize" WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
     <Window.Resources>
@@ -80,7 +80,7 @@
                     <TextBox x:Name="DateOfEmployment" Width="330" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <Label Content="Дата изменения профессии(должности) или перевода " Width="450" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                <StackPanel Orientation="Horizontal">                    
+                <StackPanel Orientation="Horizontal">
                     <Label Content="в другое структурное подразделение" Width="300" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
                     <TextBox x:Name="DateOfChangeOfProfession" Width="250" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
@@ -178,8 +178,8 @@
                     <TextBlock Grid.Column="1" Text="Количество" Style="{StaticResource Text_Block1}"/>
                     <TextBlock Grid.Column="2" Text="% износа" Style="{StaticResource Text_Block1}"/>
                     <TextBlock Grid.Column="3" Text="Расписка" Style="{StaticResource Text_Block1}"/>
-                </Grid>                
-            </Grid>            
+                </Grid>
+            </Grid>
         </Grid>
         <ScrollViewer Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
             <StackPanel x:Name="StackPanel_Inventory" >
@@ -190,7 +190,7 @@
                     Content="Добавить вещь" 
                     Width="100"
                     Click="BtnAddItem_Click" 
-                    Margin="10,10,0,10"/>            
+                    Margin="10,10,0,10"/>
             <Button x:Name="BtnSavePerson" 
                     Content="Сохранить" 
                     Width="100"
@@ -201,7 +201,7 @@
                     Width="100"
                     Click="BtnDeletePerson_Click" 
                     Margin="10" 
-                    Background="#FFFFBEBE"/>            
+                    Background="#FFFFBEBE"/>
         </StackPanel>
 
     </Grid>
