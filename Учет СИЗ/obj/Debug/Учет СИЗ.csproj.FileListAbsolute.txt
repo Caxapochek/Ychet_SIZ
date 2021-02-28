@@ -84,6 +84,3 @@ D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResou
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.exe
 D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.pdb
-D:\Проект\-\Учет СИЗ\bin\Debug\ISortList.dll
-D:\Проект\-\Учет СИЗ\bin\Debug\ISortList.pdb
-D:\Проект\-\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CopyComplete

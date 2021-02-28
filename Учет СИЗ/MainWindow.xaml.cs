@@ -9,15 +9,14 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Security.Permissions;
 using System.Windows.Media;
-using ISortList;
 using System.Collections;
 
 namespace Учет_СИЗ
 {
     #region компораторы для сортировки
-    public class SortPosition : System.Collections.IComparer
+    public class SortPosition :IComparer<Person>
     {
-        int IComparer.Compare(object x, object y)
+        int IComparer<Person>.Compare(Person x, Person y)
         {
             Person a = x as Person;
             Person b = y as Person;
@@ -25,9 +24,9 @@ namespace Учет_СИЗ
         }
     }
 
-    public class SortFIO_Chief : System.Collections.IComparer
+    public class SortFIO_Chief : IComparer<Person>
     {
-        int IComparer.Compare(object x, object y)
+        int IComparer<Person>.Compare(Person x, Person y)
         {
             Person a = x as Person;
             Person b = y as Person;
@@ -35,9 +34,9 @@ namespace Учет_СИЗ
         }
     }
 
-    public class SortFIO : System.Collections.IComparer
+    public class SortFIO : IComparer<Person>
     {
-        int IComparer.Compare(object x, object y)
+        int IComparer<Person>.Compare(Person x, Person y)
         {
             Person a = x as Person;
             Person b = y as Person;
@@ -45,9 +44,9 @@ namespace Учет_СИЗ
         }
     }
 
-    public class SortPersonal_Card_Number : System.Collections.IComparer
+    public class SortPersonal_Card_Number : IComparer<Person>
     {
-        int IComparer.Compare(object x, object y)
+        int IComparer<Person>.Compare(Person x, Person y)
         {
             Person a = x as Person;
             Person b = y as Person;
@@ -55,9 +54,9 @@ namespace Учет_СИЗ
         }
     }
 
-    public class SortPersonal_Number : System.Collections.IComparer
+    public class SortPersonal_Number : IComparer<Person>
     {
-        int IComparer.Compare(object x, object y)
+        int IComparer<Person>.Compare(Person x, Person y)
         {
             Person a = x as Person;
             Person b = y as Person;
@@ -246,52 +245,53 @@ namespace Учет_СИЗ
         #region сортировка 
         public void SortByPosition()
         {
-            int N = list_of_persons.Count;
-            Person[] SL = new Person[N];
-            SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortPosition());
-            list_of_persons = new List<Person>(SL);
+            //int N = list_of_persons.Count;
+            //Person[] SL = new Person[N];
+            //SL = list_of_persons.ToArray();
+            //Array.Sort(SL, new SortPosition());
+            //list_of_persons = new List<Person>(SL);
+            list_of_persons.Sort(new SortPosition());
         }
 
         public void SortByFIO_Chief()
         {
-            int N = list_of_persons.Count;
-            Person[] SL = new Person[N];
-            SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortFIO_Chief());
-            list_of_persons = new List<Person>(SL);
+            //int N = list_of_persons.Count;
+            //Person[] SL = new Person[N];
+            //SL = list_of_persons.ToArray();
+            //Array.Sort(SL, new SortFIO_Chief());
+            //list_of_persons = new List<Person>(SL);
+            list_of_persons.Sort(new SortFIO_Chief());
         }
 
         public void SortByFIO()
         {
-            int N = list_of_persons.Count;
-            Person[] SL = new Person[N];
-            SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortFIO());
-            list_of_persons = new List<Person>(SL);
+            //int N = list_of_persons.Count;
+            //Person[] SL = new Person[N];
+            //SL = list_of_persons.ToArray();
+            //Array.Sort(SL, new SortFIO());
+            //list_of_persons = new List<Person>(SL);
+            list_of_persons.Sort(new SortFIO());
         }
 
         public void SortByPersonal_Number()
         {
-            int N = list_of_persons.Count;
-            Person[] SL = new Person[N];
-            SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortPersonal_Number());
-            list_of_persons = new List<Person>(SL);
+            //int N = list_of_persons.Count;
+            //Person[] SL = new Person[N];
+            //SL = list_of_persons.ToArray();
+            //Array.Sort(SL, new SortPersonal_Number());
+            //list_of_persons = new List<Person>(SL);
+            list_of_persons.Sort(new SortPersonal_Number());
         }
 
         public void SortBYPersonal_Card_Number()
         {
-            int N = list_of_persons.Count;
-            Person[] SL = new Person[N];
-            SL = list_of_persons.ToArray();
-            Array.Sort(SL, new SortPersonal_Card_Number());
-            list_of_persons = new List<Person>(SL);
+            //int N = list_of_persons.Count;
+            //Person[] SL = new Person[N];
+            //SL = list_of_persons.ToArray();
+            //Array.Sort(SL, new SortPersonal_Card_Number());
+            //list_of_persons = new List<Person>(SL);
+            list_of_persons.Sort(new SortPersonal_Card_Number());
         }
-
-
-
-
         #endregion
 
         

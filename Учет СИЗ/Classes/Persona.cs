@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Учет_СИЗ.Classes;
-using ISortList;
 
 namespace Учет_СИЗ
 {
     [Serializable]
-    public class Person : ISortList1
+    public class Person : IComparer<Person>
     {
         private string Personal_Card_Number;        //Номер личной карточки+
         private string Personnel_Number;            //Табельный номер
@@ -332,35 +331,12 @@ namespace Учет_СИЗ
             this.FIO_Chief = FIO_Chief;                   //Руководитель
             this.Items = Items;
         }
-
-        public void SortByFIO()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortByPosition()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortByFIO_Chief()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortBySortByPersonal_Number()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortBYPersonal_Card_Number()
-        {
-            throw new NotImplementedException();
-        }
         #endregion
 
-        #region компораторы для сортировки
+        int IComparer<Person>.Compare(Person x, Person y)
+        {
+            throw new NotImplementedException();
+        }
 
-        #endregion
     }
 }
