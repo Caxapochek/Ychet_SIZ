@@ -76,7 +76,7 @@ namespace Учет_СИЗ
             DeserializingPersons();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) {Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) {Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
@@ -201,13 +201,13 @@ namespace Учет_СИЗ
         private Grid MakeGrid(Person person) //добовление кнопок на экран в ScrollViewer
         {
             Grid grid = new Grid { Height = 30};
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(350, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(250, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(200, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(3.5, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(2.5, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(2, GridUnitType.Star) });
 
-            Label LabelPersonalCardNumber = new Label { Content = person.Change_Personal_Card_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelPersonalCardNumber = new Label { Content = person.Change_Personal_Card_Number, FontSize = 16 , BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
             Label LabelPersonnelNumber = new Label { Content = person.Change_Personnel_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
             Label LabelFIO = new Label { Content = person.Change_Last_Name+ " " + person.Change_First_Name + " " + person.Change_Middle_Name, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
             Label LabelPosition = new Label { Content = person.Change_Position, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
@@ -222,7 +222,7 @@ namespace Учет_СИЗ
             grid.Children.Add(LabelPosition);
             Grid.SetColumn(LabelPosition, 3);
             grid.Children.Add(LabelFIOChief);
-            Grid.SetColumn(LabelFIOChief, 4);
+            Grid.SetColumn(LabelFIOChief, 4);;
 
             return grid;
         }
@@ -232,7 +232,7 @@ namespace Учет_СИЗ
             DeserializingPersons();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch};
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);

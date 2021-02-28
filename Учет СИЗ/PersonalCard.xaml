@@ -6,8 +6,8 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="602" Width="1000" 
-        ResizeMode="NoResize" WindowStyle="None"
+        Title="Personal Card" Height="602" Width="1000" MinHeight="600" MinWidth="600"
+        ResizeMode="CanResize" WindowStyle="None"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
     <Window.Resources>
         <Style TargetType="Label" x:Key="Style_Label1">
@@ -284,24 +284,27 @@
             <StackPanel x:Name="StackPanel_Inventory" >
             </StackPanel>
         </ScrollViewer>
-        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left">
+        <Grid Grid.Row="4" HorizontalAlignment="Stretch">
             <Button x:Name="BtnAddItem" 
                     Content="Добавить вещь" 
                     Width="100"
                     Click="BtnAddItem_Click" 
-                    Margin="10,10,0,10"/>
+                    Margin="10,10,0,10"
+                    HorizontalAlignment="Left"/>
             <Button x:Name="BtnSavePerson" 
                     Content="Сохранить" 
                     Width="100"
                     Click="BtnSavePerson_Click" 
-                    Margin="665,10,0,10"/>
+                    Margin="10,10,0,10" 
+                    HorizontalAlignment="Right"/>
             <Button x:Name="BtnDeletePerson" 
                     Content="Удалить" 
                     Width="100"
                     Click="BtnDeletePerson_Click" 
-                    Margin="10" 
-                    Background="#FFFFBEBE"/>
-        </StackPanel>
+                    Margin="10,10,110,10" 
+                    Background="#FFFFBEBE"
+                    HorizontalAlignment="Right"/>
+        </Grid>
 
     </Grid>
 </Window>
