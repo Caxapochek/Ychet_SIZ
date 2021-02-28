@@ -25,11 +25,30 @@
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="Background" Value="White"/>
         </Style>
+        <Style TargetType="TextBlock" x:Key="Style_TextBlock2">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
         <Style TargetType="TextBox" x:Key="Style_TextBox1">
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="100"/>
             <Setter Property="Margin" Value="1"/>
             <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="Style_ComboBox1">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="FlowDirection" Value="LeftToRight"/>
+            <Setter Property="IsEditable" Value="True"/>
+            <Setter Property="IsTextSearchCaseSensitive" Value="True"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="True"/>
+            <Setter Property="MaxDropDownHeight" Value="150"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -92,40 +111,120 @@
             <StackPanel Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Пол" Width="50" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="Gender" Width="60" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="Gender" Width="60"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="М" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="Ж" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Рост" Width="50" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="Height" Width="60" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="Height" Width="120"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="меньше 150" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="150-154" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="155-159" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="160-164" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="165-169" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="170-174" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="175-179" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="180-184" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="185-189" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="больше 190" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <Label Content="Размер:" Width="100" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Одежды" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="ClothingSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="ClothingSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="40-41" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="42-43" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="44-45" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="46-47" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="48-49" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="50-51" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="52-53" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="54-55" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="56-57" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="58-59" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Обуви" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="ShoeSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="ShoeSize" Width="100" VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="35" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="36" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="37" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="38" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="39" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="40" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="41" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="42" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="43" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="44" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="45" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="46" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="47" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="48" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="49" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Головного убора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="HeaddressSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="HeaddressSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="50-51" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="52-53" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="54-55" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="56-57" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="58-59" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="60-61" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="62-63" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="64-65" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="66-67" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="68-69" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Противогаза" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="GasMaskSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="GasMaskSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="0" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="3" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="4" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Распиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="RaspiratorSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="RaspiratorSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="3" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Рукавиц" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="MittensSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="MittensSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="0" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="3" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Перчаток" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="GlovesSize" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
+                    <ComboBox Name="GlovesSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
+                        <TextBlock Text="0" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="3" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="4" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="5" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="6" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="7" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="8" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="9" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="10" Style="{StaticResource Style_TextBlock2}"/>
+                        <TextBlock Text="11" Style="{StaticResource Style_TextBlock2}"/>
+                    </ComboBox>
                 </StackPanel>
             </StackPanel>
         </Grid>
