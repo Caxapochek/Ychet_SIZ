@@ -103,65 +103,65 @@ namespace Учет_СИЗ
             Application.Current.Shutdown();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Sort_By_Personal_Card_Number_Click(object sender, RoutedEventArgs e)
         {
             this.SortBYPersonal_Card_Number();
             StackPanel_Persona.Children.Clear();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Sort_By_Personnel_Number_Click(object sender, RoutedEventArgs e)
         {
             this.SortByPersonal_Number();
             StackPanel_Persona.Children.Clear();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Button_Sort_By_FIO_Click(object sender, RoutedEventArgs e)
         {
             this.SortByFIO();
             StackPanel_Persona.Children.Clear();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Button_Sort_By_Position_Click(object sender, RoutedEventArgs e)
         {
             this.SortByPosition();
             StackPanel_Persona.Children.Clear();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Button_Sort_By_FIO_Chief_Click(object sender, RoutedEventArgs e)
         {
             this.SortByFIO_Chief();
             StackPanel_Persona.Children.Clear();
             foreach (Person per in list_of_persons)
             {
-                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per) };
+                MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);

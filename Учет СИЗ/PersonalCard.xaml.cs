@@ -113,7 +113,7 @@ namespace Учет_СИЗ
             FIOChief.Text = Person1.Change_FIO_Chief;
             foreach (Item it in Person1.Items)
             {
-                MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it) };
+                MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it), HorizontalContentAlignment = HorizontalAlignment.Stretch};
                 BtnItem.AddWindow_Item.BtnDeleteItem.Click += Update;
                 BtnItem.AddWindow_Item.BtnSaveItem.Click += Update;
                 StackPanel_Inventory.Children.Add(BtnItem);
@@ -151,28 +151,27 @@ namespace Учет_СИЗ
         {
             Grid grid = new Grid();
             grid.Height = 30;
-            grid.Width = 1000;
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
 
-            Label LabelName = new Label { Content = item.Name_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelCertificate_Of_Conformity = new Label { Content = item.Certificate_Of_Conformity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelIssued_Date = new Label { Content = item.Issued_Date_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelIssued_Quantity = new Label { Content = item.Issued_Quantity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelIssued_Wear = new Label { Content = item.Issued_Wear_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelIssued_Receipt = new Label { Content = item.Issued_Receipt_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelReturned_Date = new Label { Content = item.Returned_Date_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelReturned_Quantity = new Label { Content = item.Returned_Quantity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelReturned_Wear = new Label { Content = item.Returned_Wear_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
-            Label LabelReturned_Receipt = new Label { Content = item.Returned_Receipt_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
+            Label LabelName = new Label { Content = item.Name_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(0, 0, 0, 0) };
+            Label LabelCertificate_Of_Conformity = new Label { Content = item.Certificate_Of_Conformity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelIssued_Date = new Label { Content = item.Issued_Date_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelIssued_Quantity = new Label { Content = item.Issued_Quantity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelIssued_Wear = new Label { Content = item.Issued_Wear_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelIssued_Receipt = new Label { Content = item.Issued_Receipt_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelReturned_Date = new Label { Content = item.Returned_Date_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelReturned_Quantity = new Label { Content = item.Returned_Quantity_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelReturned_Wear = new Label { Content = item.Returned_Wear_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
+            Label LabelReturned_Receipt = new Label { Content = item.Returned_Receipt_GetSet, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 0, 0) };
 
             grid.Children.Add(LabelName);
             Grid.SetColumn(LabelName, 0);

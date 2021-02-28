@@ -6,51 +6,9 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="Personal Card" Height="602" Width="1000" MinHeight="600" MinWidth="600"
+        Title="Personal Card" Height="602" Width="1000" MinHeight="600" MinWidth="670"
         ResizeMode="CanResize" WindowStyle="None"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderBrush="Black" BorderThickness="2">
-    <Window.Resources>
-        <Style TargetType="Label" x:Key="Style_Label1">
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Margin" Value="1"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="Text_Block1">
-            <Setter Property="Height" Value="28"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="TextAlignment" Value="Center"/>
-            <Setter Property="Background" Value="White"/>
-        </Style>
-        <Style TargetType="TextBlock" x:Key="Style_TextBlock2">
-            <Setter Property="Height" Value="20"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-        </Style>
-        <Style TargetType="TextBox" x:Key="Style_TextBox1">
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="FontSize" Value="16"/>
-        </Style>
-        <Style TargetType="ComboBox" x:Key="Style_ComboBox1">
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="0"/>
-            <Setter Property="FlowDirection" Value="LeftToRight"/>
-            <Setter Property="IsEditable" Value="True"/>
-            <Setter Property="IsTextSearchCaseSensitive" Value="True"/>
-            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
-            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
-            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
-            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="True"/>
-            <Setter Property="MaxDropDownHeight" Value="150"/>
-        </Style>
-    </Window.Resources>
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -68,45 +26,47 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="650*" />
-                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0">
-                <StackPanel Orientation="Horizontal">
+            <StackPanel Grid.Column="0" Background="White">
+                <Grid>
                     <Label Content="Фамилия" Width="80" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="SecondName" Width="470" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="SecondName" Margin="90,0,30,0" Style="{StaticResource  Style_TextBox1}" />
+                </Grid>
+                <Grid >
                     <Label Content="Имя" Width="50" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="FirstName" Width="190" Style="{StaticResource Style_TextBox1}"/>
+                    <TextBox x:Name="FirstName" Margin="60,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
                     <Label Content="Отчество" Width="80" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="MiddleName" Width="226" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="MiddleName" Margin="90,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
                     <Label Content="Табельный номер" Width="150" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="PersonnelNumber" Width="400" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="PersonnelNumber" Margin="160,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
                     <Label Content="Структурное подразделение" Width="220" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="StructuralDivision" Width="330" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="StructuralDivision" Margin="230,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
                     <Label Content="Профессия (Должность)" Width="190" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="Position" Width="360" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Position" Margin="200,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
                     <Label Content="Дата поступления на работу" Width="220" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="DateOfEmployment" Width="330" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <Label Content="Дата изменения профессии(должности) или перевода " Width="450" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="в другое структурное подразделение" Width="300" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="DateOfChangeOfProfession" Width="250" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Руководитель" Width="130" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="FIOChief" Width="420" HorizontalAlignment="Left" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
+                    <TextBox x:Name="DateOfEmployment" Margin="230,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Label Content="Дата изменения профессии(должности) или перевода " Width="450" Style="{StaticResource Style_Label1}" />
+                <Grid>
+                    <Label Content="в другое структурное подразделение" Width="300" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="DateOfChangeOfProfession" Margin="300,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
+                    <Label Content="Руководитель" Width="130" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="FIOChief" Margin="140,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
             </StackPanel>
             <StackPanel Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
@@ -193,7 +153,7 @@
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Распиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <Label Content="Рtспиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
                     <ComboBox Name="RaspiratorSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
                         <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
                         <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>
@@ -228,56 +188,81 @@
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="2" Background="#FFB6B6B6">
+        <Grid Grid.Row="2" Height="60" Background="Black">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="400*"/>
                 <ColumnDefinition Width="400*"/>
+                <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <TextBlock Text="Наименование СИЗ" Height="60" Style="{StaticResource Text_Block1}"/>
+            <Grid Grid.Column="0"  Style="{StaticResource Style_Grid1}" >
+                <TextBlock Text="Наименование СИЗ" Style="{StaticResource Style_TextBlock2}"/>
             </Grid>
-            <Grid Grid.Column="1">
-                <TextBlock Text="№ сертификата" Height="60" Style="{StaticResource Text_Block1}"/>
+            <Grid Grid.Column="1" Style="{StaticResource Style_Grid1}">
+                <TextBlock Text="№ сертификата" Height="60" Style="{StaticResource Style_TextBlock2}"/>
             </Grid>
-            <Grid Grid.Column="2">
+            <Grid Grid.Column="2" Background="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Выдано" Width="398" Style="{StaticResource Text_Block1}"/>
-                <Grid Grid.Row="1">
+                <Grid Style="{StaticResource Style_Grid1}" Margin="1,1,0,0">
+                    <TextBlock Text="Выдано"  Style="{StaticResource Style_TextBlock2}"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Background="Black">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="Дата" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="1" Text="Количество" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="2" Text="% износа" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="3" Text="Расписка" Style="{StaticResource Text_Block1}"/>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="0">
+                        <TextBlock Text="Дата" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="1">
+                        <TextBlock Text="Количество" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="2">
+                        <TextBlock Text="% износа" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="3">
+                        <TextBlock Text="Расписка" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
                 </Grid>
             </Grid>
-            <Grid Grid.Column="3">
+            <Grid Grid.Column="3" Background="Black">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="Возвращено" Width="398" Style="{StaticResource Text_Block1}"/>
-                <Grid Grid.Row="1">
+                <Grid Style="{StaticResource Style_Grid1}" Margin="1,1,0,0">
+                    <TextBlock Text="Возвращено"  Style="{StaticResource Style_TextBlock2}"/>
+                </Grid>
+                <Grid Grid.Row="1" Background="Black">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                         <ColumnDefinition Width="100*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="Дата" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="1" Text="Количество" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="2" Text="% износа" Style="{StaticResource Text_Block1}"/>
-                    <TextBlock Grid.Column="3" Text="Расписка" Style="{StaticResource Text_Block1}"/>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="0">
+                        <TextBlock  Text="Дата" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="1">
+                        <TextBlock  Text="Количество" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="2">
+                        <TextBlock  Text="% износа" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
+                    <Grid Style="{StaticResource Style_Grid1}" Grid.Column="3">
+                        <TextBlock  Text="Расписка" Style="{StaticResource Style_TextBlock2}"/>
+                    </Grid>
                 </Grid>
+            </Grid>
+            <Grid Grid.Column="4" Margin="0" Style="{StaticResource Style_Grid1}">
+
             </Grid>
         </Grid>
         <ScrollViewer Grid.Row="3" ScrollViewer.CanContentScroll="True" Background="#FFF3F3F3">
@@ -285,25 +270,15 @@
             </StackPanel>
         </ScrollViewer>
         <Grid Grid.Row="4" HorizontalAlignment="Stretch">
-            <Button x:Name="BtnAddItem" 
-                    Content="Добавить вещь" 
-                    Width="100"
-                    Click="BtnAddItem_Click" 
-                    Margin="10,10,0,10"
-                    HorizontalAlignment="Left"/>
-            <Button x:Name="BtnSavePerson" 
-                    Content="Сохранить" 
-                    Width="100"
-                    Click="BtnSavePerson_Click" 
-                    Margin="10,10,0,10" 
-                    HorizontalAlignment="Right"/>
-            <Button x:Name="BtnDeletePerson" 
-                    Content="Удалить" 
-                    Width="100"
-                    Click="BtnDeletePerson_Click" 
-                    Margin="10,10,110,10" 
-                    Background="#FFFFBEBE"
-                    HorizontalAlignment="Right"/>
+            <Button x:Name="BtnAddItem" Content="Добавить вещь" 
+                    Click="BtnAddItem_Click" Width="140" 
+                    Margin="10" HorizontalAlignment="Left" Style="{StaticResource Style_Button1}"/>
+            <Button x:Name="BtnSavePerson" Content="Сохранить" 
+                    Click="BtnSavePerson_Click" Width="100"
+                    Margin="5,5,110,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
+            <Button x:Name="BtnDeletePerson" Content="Удалить" 
+                    Click="BtnDeletePerson_Click" Width="100"   
+                    Margin="5" Background="#FFFFBEBE" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
         </Grid>
 
     </Grid>

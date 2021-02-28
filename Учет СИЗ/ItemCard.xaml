@@ -5,122 +5,99 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Учет_СИЗ"
         mc:Ignorable="d"
-        Title="ItemCard" Height="352" Width="420"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" ResizeMode="NoResize" 
-        BorderBrush="Black" BorderThickness="2">
-    <Window.Resources>
-        <Style TargetType="Label" x:Key="Style_Label1">
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Margin" Value="1"/>
-        </Style>        
-        <Style TargetType="TextBox" x:Key="Style_TextBox1">
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Width" Value="100"/>
-            <Setter Property="Margin" Value="1"/>
-            <Setter Property="FontSize" Value="16"/>
-        </Style>
-    </Window.Resources>    
+        Title="ItemCard" Height="500" Width="420" MinHeight="470" MinWidth="270"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None" ResizeMode="CanResize">
+    
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="96*"/>
-            <RowDefinition Height="96*"/>
-            <RowDefinition Height="60*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="70*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Grid.Row="0">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Наименование СИЗ" Width="200" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="Name" Width="200" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Сертификат соответствия" Width="200" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="CertificateOfConformity" Width="200" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
+                <Grid>
+                    <Label Content="Наименование СИЗ" Style="{StaticResource Style_Label1}" />
+                    <TextBox x:Name="Name" Margin="160,2,30,2" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
+                <Grid>
+                    <Label Content="Сертификат соответствия" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="CertificateOfConformity" Margin="200,2,30,2" Style="{StaticResource Style_TextBox1}"/>
+                </Grid>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="32*"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="64*"/>
                 <RowDefinition Height="64*"/>
             </Grid.RowDefinitions>
-            <Label Content="Возвращено" Width="398" Style="{StaticResource Style_Label1}"/>
+            <Label Content="Возвращено" Style="{StaticResource Style_Label1}"/>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <Label Content="Дата" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="IssuedDate" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Дата" HorizontalAlignment="Center"  Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedDate" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <Label Content="Количество" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="IssuedQuantity" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Количество" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedQuantity" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                    <Label Content="% износа" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="IssuedWear" Width="98" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Grid.Column="3">
-                    <Label Content="Расписка" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="IssuedReceipt" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="% износа" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="IssuedWear" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
             </Grid>
+                <StackPanel Grid.Row="2">
+                <Label Content="Расписка" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
+                <TextBox x:Name="IssuedReceipt" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
+                </StackPanel>
 
         </Grid>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="32*"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="64*"/>
                 <RowDefinition Height="64*"/>
             </Grid.RowDefinitions>
-            <Label Content="Выдано" Width="398" Style="{StaticResource Style_Label1}"/>
+            <Label Content="Выдано" Style="{StaticResource Style_Label1}"/>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
-                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
-                    <Label Content="Дата" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="ReturnedDate" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Дата" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedDate" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <Label Content="Количество" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="ReturnedQuantity" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="Количество" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedQuantity" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                    <Label Content="% износа" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="ReturnedWear" Width="98" Style="{StaticResource Style_TextBox1}"/>
-                </StackPanel>
-                <StackPanel Grid.Column="3">
-                    <Label Content="Расписка" Grid.Column="0" Width="98" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="ReturnedReceipt" Width="98" Style="{StaticResource Style_TextBox1}"/>
+                    <Label Content="% износа" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                    <TextBox x:Name="ReturnedWear" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
                 </StackPanel>
             </Grid>
+            <StackPanel Grid.Row="2">
+                <Label Content="Расписка" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
+                <TextBox x:Name="ReturnedReceipt" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
+            </StackPanel>
 
         </Grid>
         <Grid Grid.Row="3">
-            <Button x:Name="BtnSaveItem" 
-                    Content="Сохранить" 
-                    Width="80"
-                    Height="20"
-                    Click="BtnSaveItem_Click" 
-                    Margin="230,20,10,10" 
-                    HorizontalAlignment="Left"/>
-            <Button x:Name="BtnDeleteItem" 
-                    Content="Удалить" 
-                    Width="80"
-                    Height="20"
-                    Click="BtnDeleteItem_Click" 
-                    Margin="320,20,10,10" 
-                    Background="#FFFFBEBE"
-                    HorizontalAlignment="Left"/>
+            <Button x:Name="BtnSaveItem" Content="Сохранить" 
+                    Width="100" Click="BtnSaveItem_Click" 
+                    Margin="5,5,110,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
+            <Button x:Name="BtnDeleteItem" Content="Удалить" 
+                    Width="100" Click="BtnDeleteItem_Click" 
+                    Margin="5" Background="#FFFFBEBE" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
         </Grid>
     </Grid>
 </Window>
