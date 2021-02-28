@@ -200,12 +200,12 @@ namespace Учет_СИЗ
         }
         private Grid MakeGrid(Person person) //добовление кнопок на экран в ScrollViewer
         {
-            Grid grid = new Grid{Height = 30,Width = 1000};
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100)});
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(350) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(250) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(200) });
+            Grid grid = new Grid { Height = 30};
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(100, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(350, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(250, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(200, GridUnitType.Star) });
 
             Label LabelPersonalCardNumber = new Label { Content = person.Change_Personal_Card_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
             Label LabelPersonnelNumber = new Label { Content = person.Change_Personnel_Number, FontSize = 16, BorderBrush = Brushes.Black, BorderThickness = new Thickness(1, 0, 1, 0) };
