@@ -153,7 +153,7 @@
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Рtспиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
+                    <Label Content="Респиратора" Width="150" HorizontalAlignment="Left" Style="{StaticResource Style_Label1}" />
                     <ComboBox Name="RaspiratorSize" Width="100"  VerticalAlignment="Center" Style="{StaticResource Style_ComboBox1}">
                         <TextBlock Text="1" Style="{StaticResource Style_TextBlock2}"/>
                         <TextBlock Text="2" Style="{StaticResource Style_TextBlock2}"/>

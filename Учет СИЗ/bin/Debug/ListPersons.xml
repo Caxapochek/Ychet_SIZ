@@ -76,8 +76,8 @@
   </Person>
   <Person>
     <Sizess>
-      <Change_Height>Н/Д</Change_Height>
-      <Change_Clothing_size>Н/Д</Change_Clothing_size>
+      <Change_Height>170-174</Change_Height>
+      <Change_Clothing_size>52-53</Change_Clothing_size>
       <Change_Shoe_Size>Н/Д</Change_Shoe_Size>
       <Change_Headdress_Size>Н/Д</Change_Headdress_Size>
       <Change_Gas_Mask_Size>Н/Д</Change_Gas_Mask_Size>
@@ -87,39 +87,15 @@
     </Sizess>
     <Items />
     <Change_Personal_Card_Number>003</Change_Personal_Card_Number>
-    <Change_Personnel_Number>154896</Change_Personnel_Number>
+    <Change_Personnel_Number>176758</Change_Personnel_Number>
     <Change_First_Name>Илья</Change_First_Name>
-    <Change_Last_Name>Славинский</Change_Last_Name>
+    <Change_Last_Name>Славинский </Change_Last_Name>
     <Change_Middle_Name>Н/Д</Change_Middle_Name>
     <Change_Structural_Division>ЯрГУ</Change_Structural_Division>
     <Change_Position>Студент</Change_Position>
-    <Change_Date_Of_Employment>1.09.2018</Change_Date_Of_Employment>
-    <Change_Date_Of_Change_Of_Profession>-</Change_Date_Of_Change_Of_Profession>
-    <Change_Gender>М</Change_Gender>
-    <Change_FIO_Chief>Дурнев</Change_FIO_Chief>
-  </Person>
-  <Person>
-    <Sizess>
-      <Change_Height>Н/Д</Change_Height>
-      <Change_Clothing_size>Н/Д</Change_Clothing_size>
-      <Change_Shoe_Size>Н/Д</Change_Shoe_Size>
-      <Change_Headdress_Size>Н/Д</Change_Headdress_Size>
-      <Change_Gas_Mask_Size>Н/Д</Change_Gas_Mask_Size>
-      <Change_Raspirator_Size>Н/Д</Change_Raspirator_Size>
-      <Change_Mittens_Size>Н/Д</Change_Mittens_Size>
-      <Change_Gloves_Size>Н/Д</Change_Gloves_Size>
-    </Sizess>
-    <Items />
-    <Change_Personal_Card_Number>Н/Д</Change_Personal_Card_Number>
-    <Change_Personnel_Number>Н/Д</Change_Personnel_Number>
-    <Change_First_Name>Н/Д</Change_First_Name>
-    <Change_Last_Name>Н/Д</Change_Last_Name>
-    <Change_Middle_Name>Н/Д</Change_Middle_Name>
-    <Change_Structural_Division>Н/Д</Change_Structural_Division>
-    <Change_Position>Н/Д</Change_Position>
-    <Change_Date_Of_Employment>Н/Д</Change_Date_Of_Employment>
+    <Change_Date_Of_Employment>01.09.21</Change_Date_Of_Employment>
     <Change_Date_Of_Change_Of_Profession>Н/Д</Change_Date_Of_Change_Of_Profession>
-    <Change_Gender>Н/Д</Change_Gender>
-    <Change_FIO_Chief>Н/Д</Change_FIO_Chief>
+    <Change_Gender>М</Change_Gender>
+    <Change_FIO_Chief>Саханда</Change_FIO_Chief>
   </Person>
 </ArrayOfPerson>

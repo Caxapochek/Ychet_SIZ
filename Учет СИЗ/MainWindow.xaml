@@ -25,7 +25,7 @@
                     Click="BtnExit_Click" Content = "Закрыть" 
                     Margin="5" Width="80"  Background="#FFFFBEBE" HorizontalAlignment="Right"/>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Visibility="Collapsed">
             <Label Content="Поиск по" Width="80" Margin="5" VerticalAlignment="Bottom" Style="{StaticResource Style_Label1}"/>
             <ComboBox Name="MittensSize" Width="130" Margin="90,0,0,5" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Style="{StaticResource Style_ComboBox1}">
                 <TextBlock Text="фамилии" Style="{StaticResource Style_TextBlock2}"/>
