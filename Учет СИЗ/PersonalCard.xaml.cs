@@ -49,6 +49,7 @@ namespace Учет_СИЗ
             BtnDeletePerson.Content = "Отмена";
             BtnSavePerson.IsEnabled = true;  
             BtnSavePerson.Content = "Добавить";
+            BtnAddItem.IsEnabled = false;
             this.Show();
         }
         #endregion
