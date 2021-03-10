@@ -95,6 +95,9 @@
             <Button x:Name="BtnSaveItem" Content="Сохранить" 
                     Width="100" Click="BtnSaveItem_Click" 
                     Margin="5,5,110,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
+            <Button x:Name="BtnCancelItem" Content="Отмена" 
+                    Width="100" Click="BtnCancelItem_Click" 
+                    Margin="5,5,215,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
             <Button x:Name="BtnDeleteItem" Content="Удалить" 
                     Width="100" Click="BtnDeleteItem_Click" 
                     Margin="5" Background="#FFFFBEBE" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>

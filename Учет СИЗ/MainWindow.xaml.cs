@@ -79,6 +79,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) {Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -90,6 +91,7 @@ namespace Учет_СИЗ
             PersonalCard AddWindow = new PersonalCard(ref list_of_persons, "Add");
             AddWindow.BtnSavePerson.Click += Update;
             AddWindow.BtnDeletePerson.Click += Update;
+            AddWindow.BtnCancelPerson.Click += Update;
             AddWindow.Show();
         }
         
@@ -112,6 +114,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -125,6 +128,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -138,6 +142,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -151,6 +156,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -164,6 +170,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch };
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }
@@ -235,6 +242,7 @@ namespace Учет_СИЗ
                 MyButton_Person BtnPerson = new MyButton_Person(ref list_of_persons, per) { Content = MakeGrid(per), HorizontalContentAlignment = HorizontalAlignment.Stretch};
                 BtnPerson.AddWindow.BtnSavePerson.Click += Update;
                 BtnPerson.AddWindow.BtnDeletePerson.Click += Update;
+                BtnPerson.AddWindow.BtnCancelPerson.Click += Update;
                 StackPanel_Persona.Children.Add(BtnPerson);
             }
         }

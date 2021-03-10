@@ -77,7 +77,12 @@ namespace Учет_СИЗ
             ItemCard AddWindow = new ItemCard(ref Person1, "Add");
             AddWindow.BtnSaveItem.Click += Update;
             AddWindow.BtnDeleteItem.Click += Update;
+            AddWindow.BtnCancelItem.Click += Update;
             AddWindow.Show();
+        }
+        private void BtnCancelPerson_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
         private  void Update(object sender, EventArgs e)
         {
@@ -117,6 +122,7 @@ namespace Учет_СИЗ
                 MyButton_Item BtnItem = new MyButton_Item(ref Person1, it) { Content = MakeGrid(it), HorizontalContentAlignment = HorizontalAlignment.Stretch};
                 BtnItem.AddWindow_Item.BtnDeleteItem.Click += Update;
                 BtnItem.AddWindow_Item.BtnSaveItem.Click += Update;
+                BtnItem.AddWindow_Item.BtnCancelItem.Click += Update;
                 StackPanel_Inventory.Children.Add(BtnItem);
             }
         }
@@ -199,5 +205,6 @@ namespace Учет_СИЗ
         }
         #endregion
 
+        
     }
 }

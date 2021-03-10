@@ -279,6 +279,9 @@
             <Button x:Name="BtnDeletePerson" Content="Удалить" 
                     Click="BtnDeletePerson_Click" Width="100"   
                     Margin="5" Background="#FFFFBEBE" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
+            <Button x:Name="BtnCancelPerson" Content="Отмена" 
+                    Click="BtnCancelPerson_Click" Width="100"
+                    Margin="5,5,215,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{StaticResource Style_Button1}"/>
         </Grid>
 
     </Grid>

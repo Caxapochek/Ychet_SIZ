@@ -67,7 +67,7 @@
             <Setter Property="Width" Value="100"/>
             <Setter Property="Margin" Value="0"/>
             <Setter Property="FlowDirection" Value="LeftToRight"/>
-            <Setter Property="IsEditable" Value="True"/>
+            <Setter Property="IsEditable" Value="False"/>
             <Setter Property="IsTextSearchCaseSensitive" Value="True"/>
             <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Visible"/>
             <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>

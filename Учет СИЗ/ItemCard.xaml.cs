@@ -46,7 +46,7 @@ namespace Учет_СИЗ
         #region Кнопки
         private void BtnSaveItem_Click(object sender, RoutedEventArgs e)
         {
-        Person1.Items.Remove(Item1);
+            Person1.Items.Remove(Item1);
             Item1 = new Item(Name.Text, CertificateOfConformity.Text, IssuedDate.Text, IssuedQuantity.Text, IssuedWear.Text, IssuedReceipt.Text,
                 ReturnedDate.Text, ReturnedQuantity.Text, ReturnedWear.Text, ReturnedReceipt.Text);
             Person1.Items.Add(Item1);
@@ -55,6 +55,10 @@ namespace Учет_СИЗ
         private void BtnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
             Person1.Items.Remove(Item1);
+            this.Close();
+        }
+        private void BtnCancelItem_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
