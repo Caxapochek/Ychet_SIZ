@@ -52,11 +52,11 @@
     <Change_Personal_Card_Number>003</Change_Personal_Card_Number>
     <Change_Personnel_Number>176758</Change_Personnel_Number>
     <Change_First_Name>Илья</Change_First_Name>
-    <Change_Last_Name>Славинский </Change_Last_Name>
-    <Change_Middle_Name>Н/Д</Change_Middle_Name>
+    <Change_Last_Name>Славинский</Change_Last_Name>
+    <Change_Middle_Name>Валерьевич</Change_Middle_Name>
     <Change_Structural_Division>ЯрГУ</Change_Structural_Division>
     <Change_Position>Студент</Change_Position>
-    <Change_Date_Of_Employment>01.09.21</Change_Date_Of_Employment>
+    <Change_Date_Of_Employment>01.09.2018</Change_Date_Of_Employment>
     <Change_Date_Of_Change_Of_Profession>Н/Д</Change_Date_Of_Change_Of_Profession>
     <Change_Gender>М</Change_Gender>
     <Change_FIO_Chief>Саханда</Change_FIO_Chief>
@@ -93,8 +93,8 @@
     <Change_Middle_Name>Дмитриевич</Change_Middle_Name>
     <Change_Structural_Division>ЯрГУ</Change_Structural_Division>
     <Change_Position>Студент</Change_Position>
-    <Change_Date_Of_Employment>1.09.2018</Change_Date_Of_Employment>
-    <Change_Date_Of_Change_Of_Profession>-</Change_Date_Of_Change_Of_Profession>
+    <Change_Date_Of_Employment>01.09.2018</Change_Date_Of_Employment>
+    <Change_Date_Of_Change_Of_Profession>Н/Д</Change_Date_Of_Change_Of_Profession>
     <Change_Gender>М</Change_Gender>
     <Change_FIO_Chief>Саханда</Change_FIO_Chief>
   </Person>

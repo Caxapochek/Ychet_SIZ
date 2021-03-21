@@ -42,7 +42,7 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
                     <Label Content="Дата" HorizontalAlignment="Center"  Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="IssuedDate" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
+                    <DatePicker x:Name="IssuedDate" Margin="10,0" FontSize="16" BorderBrush="Black"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <Label Content="Количество" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
@@ -74,7 +74,7 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0">
                     <Label Content="Дата" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>
-                    <TextBox x:Name="ReturnedDate" Margin="10,0" Style="{StaticResource Style_TextBox1}"/>
+                    <DatePicker x:Name="ReturnedDate" Margin="10,0" FontSize="16" BorderBrush="Black" />
                 </StackPanel>
                 <StackPanel Grid.Column="1">
                     <Label Content="Количество" HorizontalAlignment="Center" Style="{StaticResource Style_Label1}"/>

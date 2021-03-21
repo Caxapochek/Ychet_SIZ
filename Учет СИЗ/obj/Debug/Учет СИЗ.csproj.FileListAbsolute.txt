@@ -124,3 +124,23 @@ W:\Ilya\Курс 3\Методы програмирования\Семестр 5\
 W:\Ilya\Курс 3\Методы програмирования\Семестр 5\Учет СИЗ\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
 W:\Ilya\Курс 3\Методы програмирования\Семестр 5\Учет СИЗ\Учет СИЗ\obj\Debug\Учет СИЗ.exe
 W:\Ilya\Курс 3\Методы програмирования\Семестр 5\Учет СИЗ\Учет СИЗ\obj\Debug\Учет СИЗ.pdb
+D:\Проект\Ychet_SIZ\Учет СИЗ\bin\Debug\Учет СИЗ.exe.config
+D:\Проект\Ychet_SIZ\Учет СИЗ\bin\Debug\Учет СИЗ.exe
+D:\Проект\Ychet_SIZ\Учет СИЗ\bin\Debug\Учет СИЗ.pdb
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.csprojAssemblyReference.cache
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\ItemCard.g.cs
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\MainWindow.g.cs
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\PersonalCard.g.cs
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\App.g.cs
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.cache
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ_MarkupCompile.lref
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\App.baml
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\ItemCard.baml
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\MainWindow.baml
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\PersonalCard.baml
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.g.resources
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет_СИЗ.Properties.Resources.resources
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.GenerateResource.cache
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.csproj.CoreCompileInputs.cache
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.exe
+D:\Проект\Ychet_SIZ\Учет СИЗ\obj\Debug\Учет СИЗ.pdb

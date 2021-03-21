@@ -55,13 +55,17 @@
                     <TextBox x:Name="Position" Margin="200,0,30,0" Style="{StaticResource Style_TextBox1}"/>
                 </Grid>
                 <Grid>
-                    <Label Content="Дата поступления на работу" Width="220" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="DateOfEmployment" Margin="230,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="233*"/>
+                        <ColumnDefinition Width="460*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Дата поступления на работу" Width="220" Style="{StaticResource Style_Label1}" Margin="1,1,0,1" />
+                    <DatePicker x:Name="DateOfEmployment" Margin="230,1,30,0" FontSize="16" BorderBrush="Black" Grid.ColumnSpan="2"/>
                 </Grid>
                 <Label Content="Дата изменения профессии(должности) или перевода " Width="450" Style="{StaticResource Style_Label1}" />
                 <Grid>
                     <Label Content="в другое структурное подразделение" Width="300" Style="{StaticResource Style_Label1}" />
-                    <TextBox x:Name="DateOfChangeOfProfession" Margin="300,0,30,0" Style="{StaticResource Style_TextBox1}"/>
+                    <DatePicker x:Name="DateOfChangeOfProfession" Margin="300,0,30,1" FontSize="16" BorderBrush="Black"/>
                 </Grid>
                 <Grid>
                     <Label Content="Руководитель" Width="130" Style="{StaticResource Style_Label1}" />
