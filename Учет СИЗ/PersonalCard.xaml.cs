@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -57,14 +58,65 @@ namespace Учет_СИЗ
         #region Кнопки
         public void BtnSavePerson_Click(object sender, RoutedEventArgs e)
         {
-            List_of_persons.Remove(Person1);
-            Sizes1 = new Sizes(Height.Text, ClothingSize.Text, ShoeSize.Text, HeaddressSize.Text, GasMaskSize.Text, RaspiratorSize.Text,
-            MittensSize.Text, GlovesSize.Text);
-            Person1 = new Person(PersonalCardNumber.Text, PersonnelNumber.Text, FirstName.Text, SecondName.Text,  MiddleName.Text,
-            StructuralDivision.Text, Position.Text, DateOfEmployment.Text, DateOfChangeOfProfession.Text, Gender.Text, FIOChief.Text, Sizes1, Person1.Items);
-            List_of_persons.Add(Person1);
-            SerializingPersons(List_of_persons);
-            this.Close();
+            var letters = new Regex(@"^[А-я]+$");
+            var numbers = new Regex(@"^[0-9,-]+$");
+            if (numbers.IsMatch(PersonalCardNumber.Text) && numbers.IsMatch(PersonnelNumber.Text) && letters.IsMatch(MiddleName.Text) && letters.IsMatch(SecondName.Text) && letters.IsMatch(FirstName.Text))
+            {
+                List_of_persons.Remove(Person1);
+                Sizes1 = new Sizes(Height.Text, ClothingSize.Text, ShoeSize.Text, HeaddressSize.Text, GasMaskSize.Text, RaspiratorSize.Text,
+                MittensSize.Text, GlovesSize.Text);
+                Person1 = new Person(PersonalCardNumber.Text, PersonnelNumber.Text, FirstName.Text, SecondName.Text, MiddleName.Text,
+                StructuralDivision.Text, Position.Text, DateOfEmployment.Text, DateOfChangeOfProfession.Text, Gender.Text, FIOChief.Text, Sizes1, Person1.Items);
+                List_of_persons.Add(Person1);
+                SerializingPersons(List_of_persons);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Некорректно введенные данные");
+                var error = Brushes.Red;
+                var standart = Brushes.Black;
+                if (!numbers.IsMatch(PersonalCardNumber.Text))
+                {
+                    PersonalCardNumber.BorderBrush = error;
+                }
+                else
+                {
+                    PersonalCardNumber.BorderBrush = standart;
+                }
+                if (!numbers.IsMatch(PersonnelNumber.Text))
+                {
+                    PersonnelNumber.BorderBrush = error;
+                }
+                else
+                {
+                    PersonnelNumber.BorderBrush = standart;
+                }
+                if (!letters.IsMatch(MiddleName.Text))
+                {
+                    MiddleName.BorderBrush = error;
+                }
+                else
+                {
+                    MiddleName.BorderBrush = standart;
+                }
+                if (!letters.IsMatch(SecondName.Text))
+                {
+                    SecondName.BorderBrush = error;
+                }
+                else
+                {
+                    SecondName.BorderBrush = standart;
+                }
+                if (!letters.IsMatch(FirstName.Text))
+                {
+                    FirstName.BorderBrush = error;
+                }
+                else
+                {
+                    FirstName.BorderBrush = standart;
+                }
+            }
         }
         private void BtnDeletePerson_Click(object sender, RoutedEventArgs e)
         {
