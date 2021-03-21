@@ -48,7 +48,20 @@
       <Change_Mittens_Size>Н/Д</Change_Mittens_Size>
       <Change_Gloves_Size>Н/Д</Change_Gloves_Size>
     </Sizess>
-    <Items />
+    <Items>
+      <Item>
+        <Name_GetSet>Перчатки</Name_GetSet>
+        <Certificate_Of_Conformity_GetSet>КД-123</Certificate_Of_Conformity_GetSet>
+        <Issued_Date_GetSet>Н/Д</Issued_Date_GetSet>
+        <Issued_Quantity_GetSet>2</Issued_Quantity_GetSet>
+        <Issued_Wear_GetSet>12</Issued_Wear_GetSet>
+        <Issued_Receipt_GetSet>Подтверждаю</Issued_Receipt_GetSet>
+        <Returned_Date_GetSet>Н/Д</Returned_Date_GetSet>
+        <Returned_Quantity_GetSet>Н/Д</Returned_Quantity_GetSet>
+        <Returned_Wear_GetSet>Н/Д</Returned_Wear_GetSet>
+        <Returned_Receipt_GetSet>Н/Д</Returned_Receipt_GetSet>
+      </Item>
+    </Items>
     <Change_Personal_Card_Number>003</Change_Personal_Card_Number>
     <Change_Personnel_Number>176758</Change_Personnel_Number>
     <Change_First_Name>Илья</Change_First_Name>
@@ -76,14 +89,26 @@
       <Item>
         <Name_GetSet>Перчатки с полимерным покрытием</Name_GetSet>
         <Certificate_Of_Conformity_GetSet>27154-234</Certificate_Of_Conformity_GetSet>
-        <Issued_Date_GetSet>12.10.18</Issued_Date_GetSet>
+        <Issued_Date_GetSet>Н/Д</Issued_Date_GetSet>
         <Issued_Quantity_GetSet>2</Issued_Quantity_GetSet>
         <Issued_Wear_GetSet>0</Issued_Wear_GetSet>
         <Issued_Receipt_GetSet>Выписка №2</Issued_Receipt_GetSet>
-        <Returned_Date_GetSet>12.10.19</Returned_Date_GetSet>
+        <Returned_Date_GetSet>Н/Д</Returned_Date_GetSet>
         <Returned_Quantity_GetSet>1</Returned_Quantity_GetSet>
         <Returned_Wear_GetSet>100</Returned_Wear_GetSet>
         <Returned_Receipt_GetSet>Документ о списании от 12.10.19</Returned_Receipt_GetSet>
+      </Item>
+      <Item>
+        <Name_GetSet>Перчатки</Name_GetSet>
+        <Certificate_Of_Conformity_GetSet>12312</Certificate_Of_Conformity_GetSet>
+        <Issued_Date_GetSet>Н/Д</Issued_Date_GetSet>
+        <Issued_Quantity_GetSet>2</Issued_Quantity_GetSet>
+        <Issued_Wear_GetSet>12</Issued_Wear_GetSet>
+        <Issued_Receipt_GetSet>Подтверждаю</Issued_Receipt_GetSet>
+        <Returned_Date_GetSet>Н/Д</Returned_Date_GetSet>
+        <Returned_Quantity_GetSet>Н/Д</Returned_Quantity_GetSet>
+        <Returned_Wear_GetSet>Н/Д</Returned_Wear_GetSet>
+        <Returned_Receipt_GetSet>Н/Д</Returned_Receipt_GetSet>
       </Item>
     </Items>
     <Change_Personal_Card_Number>002</Change_Personal_Card_Number>

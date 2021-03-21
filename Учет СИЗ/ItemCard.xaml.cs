@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System.Text.RegularExpressions;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using Учет_СИЗ.Classes;
 
 namespace Учет_СИЗ
@@ -46,11 +49,30 @@ namespace Учет_СИЗ
         #region Кнопки
         private void BtnSaveItem_Click(object sender, RoutedEventArgs e)
         {
-            Person1.Items.Remove(Item1);
-            Item1 = new Item(Name.Text, CertificateOfConformity.Text, IssuedDate.Text, IssuedQuantity.Text, IssuedWear.Text, IssuedReceipt.Text,
-                ReturnedDate.Text, ReturnedQuantity.Text, ReturnedWear.Text, ReturnedReceipt.Text);
-            Person1.Items.Add(Item1);
-            this.Close();
+            var numbers = new Regex(@"^[0-9]+");
+            var numbers1 = new Regex(@"^[0-9]*");
+            if (!string.IsNullOrEmpty(Name.Text) && !string.IsNullOrEmpty(CertificateOfConformity.Text) && numbers.IsMatch(IssuedQuantity.Text) && (numbers.IsMatch(IssuedWear.Text)) && int.Parse(IssuedWear.Text) <= 100 
+                && int.Parse(IssuedWear.Text) >= 0 && !string.IsNullOrEmpty(IssuedReceipt.Text) && numbers1.IsMatch(ReturnedQuantity.Text) && numbers1.IsMatch(ReturnedWear.Text) && !string.IsNullOrEmpty(IssuedDate.Text))
+            {
+                Person1.Items.Remove(Item1);
+                Item1 = new Item(Name.Text, CertificateOfConformity.Text, IssuedDate.Text, IssuedQuantity.Text, IssuedWear.Text, IssuedReceipt.Text,
+                    ReturnedDate.Text, ReturnedQuantity.Text, ReturnedWear.Text, ReturnedReceipt.Text);
+                Person1.Items.Add(Item1);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Некорректорные данные");
+                CheckIsNullOrEmpty(Name);
+                CheckIsNullOrEmpty(CertificateOfConformity);
+                CheckRegex(IssuedQuantity, numbers);
+                CheckIssueWear(IssuedWear, numbers);
+                CheckIsNullOrEmpty(IssuedReceipt);
+                CheckRegex(ReturnedQuantity, numbers1);
+                CheckRegex(ReturnedWear, numbers1);
+                CheckReturnWear(ReturnedWear, numbers);
+                CheckDate(IssuedDate);
+            }
         }
         private void BtnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
@@ -80,6 +102,76 @@ namespace Учет_СИЗ
             ReturnedQuantity.Text = Item1.Returned_Quantity_GetSet;
             ReturnedWear.Text = Item1.Returned_Wear_GetSet;
             ReturnedReceipt.Text = Item1.Returned_Receipt_GetSet;
+        }
+
+        private void CheckIsNullOrEmpty(TextBox textBox)
+        {
+            var error = Brushes.Red;
+            var standart = Brushes.Black;
+            if (string.IsNullOrEmpty(textBox.Text))
+            {
+                textBox.BorderBrush = error;
+            }
+            else
+            {
+                textBox.BorderBrush = standart;
+            }
+        }
+
+        private void CheckRegex (TextBox textBox, Regex regex)
+        {
+            var error = Brushes.Red;
+            var standart = Brushes.Black;
+            if (!regex.IsMatch(textBox.Text))
+            {
+                textBox.BorderBrush = error;
+            }
+            else
+            {
+                textBox.BorderBrush = standart;
+            }
+        }
+
+        private void CheckIssueWear (TextBox textBox, Regex regex)
+        {
+            var error = Brushes.Red;
+            var standart = Brushes.Black;
+            if (!regex.IsMatch(textBox.Text) || (int.Parse(textBox.Text) < 0) || (int.Parse(textBox.Text) > 100))
+            {
+                textBox.BorderBrush = error;
+            }
+            else
+            {
+                textBox.BorderBrush = standart;
+            }
+        }
+
+        private void CheckReturnWear(TextBox textBox, Regex regex)
+        {
+            var error = Brushes.Red;
+            var standart = Brushes.Black;
+            if (string.IsNullOrEmpty(textBox.Text) || (regex.IsMatch(textBox.Text) && (int.Parse(textBox.Text) >= 0) && (int.Parse(textBox.Text) <= 100)))
+            {
+                textBox.BorderBrush = standart;
+            }
+            else 
+            {
+                textBox.BorderBrush = error;
+            }
+        }
+
+        private void CheckDate (DatePicker datePicker)
+        {
+            var error = Brushes.Red;
+            var standart = Brushes.Black;
+            if (string.IsNullOrEmpty(datePicker.Text))
+            {
+                datePicker.BorderBrush = error;
+            }
+            else
+            {
+                datePicker.BorderBrush = standart;
+            }
         }
         #endregion
 
